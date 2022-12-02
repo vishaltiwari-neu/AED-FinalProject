@@ -24,4 +24,8 @@ hs_err_pid*
 
 
 /ApartmentListing/build/
+<<<<<<< Updated upstream
 /ApartmentListing/nbproject/
+=======
+/ApartmentListing/dist/
+>>>>>>> Stashed changes
