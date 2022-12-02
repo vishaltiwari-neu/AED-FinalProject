@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package UI;
+package design;
 
 /**
  *
@@ -61,6 +61,14 @@ public class Login extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Microsoft YaHei", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Login as:");
+
+        choiceRole.setName(""); // NOI18N
+
+        txtpass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtpassActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
@@ -127,7 +135,15 @@ public class Login extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
+        String username = txtusername.getText();
+        String password = txtpass.getText();
+        
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtpassActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

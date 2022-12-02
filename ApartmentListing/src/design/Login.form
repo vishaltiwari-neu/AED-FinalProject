@@ -153,8 +153,14 @@
           </Properties>
         </Component>
         <Component class="java.awt.Choice" name="choiceRole">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="" noResource="true"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JPasswordField" name="txtpass">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtpassActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>

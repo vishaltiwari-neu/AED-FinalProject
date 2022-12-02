@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package UI;
+package design;
 
 /**
  *
@@ -254,6 +254,15 @@ public class SignUp extends javax.swing.JPanel {
 
     private void btnsigninActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsigninActionPerformed
         // TODO add your handling code here:
+        String name = txtname.getText();
+        String contactno = txtcontact.getText();
+        String address = txtaddress.getText();
+        String city = txtcity.getText();
+        String zip = txtzip.getText();
+        String state = txtstate.getText();
+        String username = txtusername.getText();
+        String password = txtpass.getText();
+        
     }//GEN-LAST:event_btnsigninActionPerformed
 
     private void btnclearMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnclearMouseReleased
