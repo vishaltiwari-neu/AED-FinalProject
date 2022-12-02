@@ -105,15 +105,15 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void loginJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginJbuttonActionPerformed
         // TODO add your handling code here:
-       // Login l = new Login();
-        //SplitPane.setRightComponent(l);
+        Login l = new Login();
+        SplitPane.setRightComponent(l);
         
     }//GEN-LAST:event_loginJbuttonActionPerformed
 
     private void signupJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupJbuttonActionPerformed
         // TODO add your handling code here:
-        //SignUp s = new SignUp();
-        //SplitPane.setRightComponent(s);
+        SignUp s = new SignUp();
+        SplitPane.setRightComponent(s);
     }//GEN-LAST:event_signupJbuttonActionPerformed
 
     /**
