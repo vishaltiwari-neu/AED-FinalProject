@@ -4,6 +4,8 @@
  */
 package design;
 
+import javax.swing.JOptionPane;
+import model.Person;
 import model.Role;
 
 /**
@@ -17,6 +19,9 @@ public class Login extends javax.swing.JPanel {
      */
     public Login() {
         initComponents();
+  
+        Role[] role = Role.values();
+        addRole(role);
     }
 
     /**
@@ -142,6 +147,33 @@ public class Login extends javax.swing.JPanel {
         String password = txtpass.getText();
         Role r = Role.valueOf(choiceRole.getSelectedItem());
         
+        /*
+        int validated = validateInputFields(username, password);
+        if (validated == 1) {
+            Person person = pd.signin(username, password, r);
+            if (person != null) {
+                System.out.println(person.getRole().toString());
+                
+                AdminJFrame pageDoctor = new AdminJFrame(pd, person);
+                BrokerLogin pagePatient = new BrokerLogin(pd, person);
+                CustomerLogin pageSysAdmin = new CustomerLogin(pd, person);
+                
+                switch (person.getRole().toString()) {
+                    case "PATIENT" ->
+                        pagePatient.setVisible(true);
+                    case "DOCTOR" ->
+                        pageDoctor.setVisible(true);
+                    case "COMMUNITYADMIN" ->
+                        pageComunity.setVisible(true);
+                    case "SYSADMIN" ->
+                        pageSysAdmin.setVisible(true);
+                }
+
+            } else {
+                JOptionPane.showMessageDialog(this, "Username does not exist. Please register to login.");
+            }
+        }
+*/
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void addRole(Role[] role) {
@@ -149,6 +181,20 @@ public class Login extends javax.swing.JPanel {
         for (Role r : role) {
             choiceRole.add(r.toString());
         }
+    }
+    
+    private int validateInputFields(String username, String password) {
+        //Function to validate the input fields
+        int validated = 1;
+
+        if (username == null || username.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Username cannot be empty.");
+            validated = 0;
+        } else if (password == null || password.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Password cannot be empty.");
+            validated = 0;
+        }
+        return validated;
     }
     
     private void txtpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpassActionPerformed

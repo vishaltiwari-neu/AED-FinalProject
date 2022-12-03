@@ -3,9 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package design;
+import javax.swing.JOptionPane;
 import model.PersonDirectory;
 import model.Role;
-
 
 /**
  *
@@ -17,9 +17,11 @@ public class SignUp extends javax.swing.JPanel {
      * Creates new form SignUp
      */
     public SignUp() {
-        
+   
         initComponents();
-        
+        Role[] role = Role.values();
+        addRoles(role);
+
     }
 
     /**
@@ -269,7 +271,13 @@ public class SignUp extends javax.swing.JPanel {
     private void btnsigninMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnsigninMouseReleased
         // TODO add your handling code here:
     }//GEN-LAST:event_btnsigninMouseReleased
-
+    
+    private void addRoles(Role[] role) {
+        for (Role r : role) {
+            choicerole.add(r.toString());
+        }
+    }
+    
     private void btnsigninActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsigninActionPerformed
         // TODO add your handling code here:
         String name = txtname.getText();
@@ -281,13 +289,15 @@ public class SignUp extends javax.swing.JPanel {
         String username = txtusername.getText();
         String password = txtpass.getText();
         String email = txtemail.getText();
-        int age = Integer.parseInt( txtage.getText());
+        int age = Integer.parseInt(txtage.getText());
         Role r = Role.valueOf(choicerole.getSelectedItem());
-        
+
         PersonDirectory pd = new PersonDirectory();
+
+        pd.signup(name, age, username, password, r, contactno, address, city, email);
         
-        pd.signup(name, age, username, password, r, contactno,address, city, email);
-        
+        JOptionPane.showMessageDialog(this,"SignUp Successfull");
+
     }//GEN-LAST:event_btnsigninActionPerformed
 
     private void btnclearMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnclearMouseReleased

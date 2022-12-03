@@ -8,12 +8,12 @@ package design;
  *
  * @author renuka
  */
-public class ownerJFrame extends javax.swing.JFrame {
+public class qualityCheckJFrame extends javax.swing.JFrame {
 
     /**
-     * Creates new form ownerJFrame
+     * Creates new form qualityCheckJFrame
      */
-    public ownerJFrame() {
+    public qualityCheckJFrame() {
         initComponents();
     }
 
@@ -26,25 +26,18 @@ public class ownerJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         SplitPane = new javax.swing.JSplitPane();
         controlPanel = new javax.swing.JPanel();
-        listApartJbutton = new javax.swing.JButton();
-        viewContractJbutton = new javax.swing.JButton();
+        raiseReqJbutton = new javax.swing.JButton();
         workArea = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        listApartJbutton.setText("List Apartment");
-        listApartJbutton.addActionListener(new java.awt.event.ActionListener() {
+        raiseReqJbutton.setText("Raise Request");
+        raiseReqJbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                listApartJbuttonActionPerformed(evt);
-            }
-        });
-
-        viewContractJbutton.setText("View Contracts");
-        viewContractJbutton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                viewContractJbuttonActionPerformed(evt);
+                raiseReqJbuttonActionPerformed(evt);
             }
         });
 
@@ -54,24 +47,15 @@ public class ownerJFrame extends javax.swing.JFrame {
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(listApartJbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(viewContractJbutton)))
-                .addContainerGap())
+                .addComponent(raiseReqJbutton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        controlPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {listApartJbutton, viewContractJbutton});
-
         controlPanelLayout.setVerticalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
-                .addGap(188, 188, 188)
-                .addComponent(listApartJbutton)
-                .addGap(62, 62, 62)
-                .addComponent(viewContractJbutton)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addGap(212, 212, 212)
+                .addComponent(raiseReqJbutton)
+                .addContainerGap(308, Short.MAX_VALUE))
         );
 
         SplitPane.setLeftComponent(controlPanel);
@@ -80,11 +64,11 @@ public class ownerJFrame extends javax.swing.JFrame {
         workArea.setLayout(workAreaLayout);
         workAreaLayout.setHorizontalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 603, Short.MAX_VALUE)
+            .addGap(0, 667, Short.MAX_VALUE)
         );
         workAreaLayout.setVerticalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 510, Short.MAX_VALUE)
+            .addGap(0, 543, Short.MAX_VALUE)
         );
 
         SplitPane.setRightComponent(workArea);
@@ -93,7 +77,7 @@ public class ownerJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 763, Short.MAX_VALUE)
+            .addComponent(SplitPane)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,17 +87,12 @@ public class ownerJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void listApartJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listApartJbuttonActionPerformed
+    private void raiseReqJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_raiseReqJbuttonActionPerformed
         // TODO add your handling code here:
-        listApartJpanel l = new listApartJpanel();
-        SplitPane.setRightComponent(l);
-    }//GEN-LAST:event_listApartJbuttonActionPerformed
-
-    private void viewContractJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewContractJbuttonActionPerformed
-        // TODO add your handling code here:
-        viewContractsJPanel j = new viewContractsJPanel();
-        SplitPane.setRightComponent(j);
-    }//GEN-LAST:event_viewContractJbuttonActionPerformed
+        qualityCheckJPanel qp = new qualityCheckJPanel();
+        SplitPane.setRightComponent(qp);
+        
+    }//GEN-LAST:event_raiseReqJbuttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,29 +111,29 @@ public class ownerJFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ownerJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(qualityCheckJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ownerJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(qualityCheckJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ownerJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(qualityCheckJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ownerJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(qualityCheckJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ownerJFrame().setVisible(true);
+                new qualityCheckJFrame().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JSplitPane SplitPane;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JPanel controlPanel;
-    private javax.swing.JButton listApartJbutton;
-    private javax.swing.JButton viewContractJbutton;
+    private javax.swing.JButton raiseReqJbutton;
     private javax.swing.JPanel workArea;
     // End of variables declaration//GEN-END:variables
 }
