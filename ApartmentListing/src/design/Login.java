@@ -4,6 +4,8 @@
  */
 package design;
 
+import model.Role;
+
 /**
  *
  * @author HP
@@ -138,9 +140,17 @@ public class Login extends javax.swing.JPanel {
         
         String username = txtusername.getText();
         String password = txtpass.getText();
+        Role r = Role.valueOf(choiceRole.getSelectedItem());
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void addRole(Role[] role) {
+        //Adding the drop down for title
+        for (Role r : role) {
+            choiceRole.add(r.toString());
+        }
+    }
+    
     private void txtpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpassActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtpassActionPerformed
