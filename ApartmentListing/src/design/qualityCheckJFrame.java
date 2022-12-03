@@ -26,14 +26,20 @@ public class qualityCheckJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         SplitPane = new javax.swing.JSplitPane();
         controlPanel = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        raiseReqJbutton = new javax.swing.JButton();
         workArea = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Add Task");
+        raiseReqJbutton.setText("Raise Request");
+        raiseReqJbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                raiseReqJbuttonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout controlPanelLayout = new javax.swing.GroupLayout(controlPanel);
         controlPanel.setLayout(controlPanelLayout);
@@ -41,14 +47,14 @@ public class qualityCheckJFrame extends javax.swing.JFrame {
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addComponent(raiseReqJbutton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         controlPanelLayout.setVerticalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
                 .addGap(212, 212, 212)
-                .addComponent(jButton1)
+                .addComponent(raiseReqJbutton)
                 .addContainerGap(308, Short.MAX_VALUE))
         );
 
@@ -71,7 +77,7 @@ public class qualityCheckJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 772, Short.MAX_VALUE)
+            .addComponent(SplitPane)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -80,6 +86,13 @@ public class qualityCheckJFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void raiseReqJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_raiseReqJbuttonActionPerformed
+        // TODO add your handling code here:
+        qualityCheckJPanel qp = new qualityCheckJPanel();
+        SplitPane.setRightComponent(qp);
+        
+    }//GEN-LAST:event_raiseReqJbuttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -118,8 +131,9 @@ public class qualityCheckJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JSplitPane SplitPane;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JPanel controlPanel;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton raiseReqJbutton;
     private javax.swing.JPanel workArea;
     // End of variables declaration//GEN-END:variables
 }

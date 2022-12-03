@@ -93,6 +93,11 @@ public class listApartJpanel extends javax.swing.JPanel {
         });
 
         propertyTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select...", "Condo", "House", "Apartment Unit", "Townhouse" }));
+        propertyTypeComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                propertyTypeComboBoxActionPerformed(evt);
+            }
+        });
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("City  :");
@@ -219,6 +224,10 @@ public class listApartJpanel extends javax.swing.JPanel {
     private void unitNoJtextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unitNoJtextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_unitNoJtextActionPerformed
+
+    private void propertyTypeComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_propertyTypeComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_propertyTypeComboBoxActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
