@@ -5,6 +5,7 @@
 package design;
 
 import javax.swing.JOptionPane;
+import model.PersonDirectory;
 import model.Person;
 import model.Role;
 
@@ -142,11 +143,12 @@ public class Login extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
+        PersonDirectory pd = new PersonDirectory();
         String username = txtusername.getText();
         String password = txtpass.getText();
         Role r = Role.valueOf(choiceRole.getSelectedItem());
-        
+        Person p = pd.login(username, password, r);
+        JOptionPane.showMessageDialog(this, p.getUserName());
         /*
         int validated = validateInputFields(username, password);
         if (validated == 1) {
