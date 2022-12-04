@@ -8,12 +8,12 @@ package design;
  *
  * @author renuka
  */
-public class ownerJFrame extends javax.swing.JFrame {
+public class DriverJFrame extends javax.swing.JFrame {
 
     /**
-     * Creates new form ownerJFrame
+     * Creates new form DriverJFrame
      */
-    public ownerJFrame() {
+    public DriverJFrame() {
         initComponents();
     }
 
@@ -28,23 +28,15 @@ public class ownerJFrame extends javax.swing.JFrame {
 
         SplitPane = new javax.swing.JSplitPane();
         controlPanel = new javax.swing.JPanel();
-        listApartJbutton = new javax.swing.JButton();
-        viewContractJbutton = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         workArea = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        listApartJbutton.setText("List Apartment");
-        listApartJbutton.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("View Schedule");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                listApartJbuttonActionPerformed(evt);
-            }
-        });
-
-        viewContractJbutton.setText("View Contracts");
-        viewContractJbutton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                viewContractJbuttonActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -54,24 +46,15 @@ public class ownerJFrame extends javax.swing.JFrame {
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(listApartJbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(viewContractJbutton)))
-                .addContainerGap())
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        controlPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {listApartJbutton, viewContractJbutton});
-
         controlPanelLayout.setVerticalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
-                .addGap(188, 188, 188)
-                .addComponent(listApartJbutton)
-                .addGap(62, 62, 62)
-                .addComponent(viewContractJbutton)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addGap(240, 240, 240)
+                .addComponent(jButton1)
+                .addContainerGap(357, Short.MAX_VALUE))
         );
 
         SplitPane.setLeftComponent(controlPanel);
@@ -80,11 +63,11 @@ public class ownerJFrame extends javax.swing.JFrame {
         workArea.setLayout(workAreaLayout);
         workAreaLayout.setHorizontalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 603, Short.MAX_VALUE)
+            .addGap(0, 731, Short.MAX_VALUE)
         );
         workAreaLayout.setVerticalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 510, Short.MAX_VALUE)
+            .addGap(0, 620, Short.MAX_VALUE)
         );
 
         SplitPane.setRightComponent(workArea);
@@ -93,7 +76,7 @@ public class ownerJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 763, Short.MAX_VALUE)
+            .addComponent(SplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 836, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,17 +86,11 @@ public class ownerJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void listApartJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listApartJbuttonActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        listApartJpanel l = new listApartJpanel();
-        SplitPane.setRightComponent(l);
-    }//GEN-LAST:event_listApartJbuttonActionPerformed
-
-    private void viewContractJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewContractJbuttonActionPerformed
-        // TODO add your handling code here:
-        viewContractsJPanel j = new viewContractsJPanel();
-        SplitPane.setRightComponent(j);
-    }//GEN-LAST:event_viewContractJbuttonActionPerformed
+        viewscheduleJPanel vs = new viewscheduleJPanel();
+        SplitPane.setRightComponent(vs);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,20 +109,20 @@ public class ownerJFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ownerJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DriverJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ownerJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DriverJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ownerJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DriverJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ownerJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DriverJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ownerJFrame().setVisible(true);
+                new DriverJFrame().setVisible(true);
             }
         });
     }
@@ -153,8 +130,7 @@ public class ownerJFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JSplitPane SplitPane;
     private javax.swing.JPanel controlPanel;
-    private javax.swing.JButton listApartJbutton;
-    private javax.swing.JButton viewContractJbutton;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel workArea;
     // End of variables declaration//GEN-END:variables
 }

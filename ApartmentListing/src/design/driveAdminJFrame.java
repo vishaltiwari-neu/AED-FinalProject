@@ -8,12 +8,12 @@ package design;
  *
  * @author renuka
  */
-public class ownerJFrame extends javax.swing.JFrame {
+public class driveAdminJFrame extends javax.swing.JFrame {
 
     /**
-     * Creates new form ownerJFrame
+     * Creates new form driveAdminJFrame
      */
-    public ownerJFrame() {
+    public driveAdminJFrame() {
         initComponents();
     }
 
@@ -28,25 +28,28 @@ public class ownerJFrame extends javax.swing.JFrame {
 
         SplitPane = new javax.swing.JSplitPane();
         controlPanel = new javax.swing.JPanel();
-        listApartJbutton = new javax.swing.JButton();
-        viewContractJbutton = new javax.swing.JButton();
+        addDriverJbutton = new javax.swing.JButton();
+        viewDriverJbutton = new javax.swing.JButton();
+        updateDriverJbutton = new javax.swing.JButton();
         workArea = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        listApartJbutton.setText("List Apartment");
-        listApartJbutton.addActionListener(new java.awt.event.ActionListener() {
+        addDriverJbutton.setText("Add Driver");
+        addDriverJbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                listApartJbuttonActionPerformed(evt);
+                addDriverJbuttonActionPerformed(evt);
             }
         });
 
-        viewContractJbutton.setText("View Contracts");
-        viewContractJbutton.addActionListener(new java.awt.event.ActionListener() {
+        viewDriverJbutton.setText("View Driver");
+        viewDriverJbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                viewContractJbuttonActionPerformed(evt);
+                viewDriverJbuttonActionPerformed(evt);
             }
         });
+
+        updateDriverJbutton.setText("Update Driver");
 
         javax.swing.GroupLayout controlPanelLayout = new javax.swing.GroupLayout(controlPanel);
         controlPanel.setLayout(controlPanelLayout);
@@ -55,24 +58,27 @@ public class ownerJFrame extends javax.swing.JFrame {
             .addGroup(controlPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(listApartJbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(viewContractJbutton)))
-                .addContainerGap())
+                    .addComponent(addDriverJbutton)
+                    .addComponent(viewDriverJbutton)
+                    .addComponent(updateDriverJbutton))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        controlPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {listApartJbutton, viewContractJbutton});
+        controlPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addDriverJbutton, updateDriverJbutton, viewDriverJbutton});
 
         controlPanelLayout.setVerticalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
-                .addGap(188, 188, 188)
-                .addComponent(listApartJbutton)
-                .addGap(62, 62, 62)
-                .addComponent(viewContractJbutton)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addGap(123, 123, 123)
+                .addComponent(addDriverJbutton)
+                .addGap(31, 31, 31)
+                .addComponent(viewDriverJbutton)
+                .addGap(29, 29, 29)
+                .addComponent(updateDriverJbutton)
+                .addContainerGap(246, Short.MAX_VALUE))
         );
+
+        controlPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {addDriverJbutton, updateDriverJbutton, viewDriverJbutton});
 
         SplitPane.setLeftComponent(controlPanel);
 
@@ -80,11 +86,11 @@ public class ownerJFrame extends javax.swing.JFrame {
         workArea.setLayout(workAreaLayout);
         workAreaLayout.setHorizontalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 603, Short.MAX_VALUE)
+            .addGap(0, 589, Short.MAX_VALUE)
         );
         workAreaLayout.setVerticalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 510, Short.MAX_VALUE)
+            .addGap(0, 498, Short.MAX_VALUE)
         );
 
         SplitPane.setRightComponent(workArea);
@@ -93,7 +99,7 @@ public class ownerJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 763, Short.MAX_VALUE)
+            .addComponent(SplitPane)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,17 +109,18 @@ public class ownerJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void listApartJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listApartJbuttonActionPerformed
+    private void addDriverJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addDriverJbuttonActionPerformed
         // TODO add your handling code here:
-        listApartJpanel l = new listApartJpanel();
-        SplitPane.setRightComponent(l);
-    }//GEN-LAST:event_listApartJbuttonActionPerformed
+        addDriverJPanel ad = new addDriverJPanel();
+        SplitPane.setRightComponent(ad);
+        
+    }//GEN-LAST:event_addDriverJbuttonActionPerformed
 
-    private void viewContractJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewContractJbuttonActionPerformed
+    private void viewDriverJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewDriverJbuttonActionPerformed
         // TODO add your handling code here:
-        viewContractsJPanel j = new viewContractsJPanel();
-        SplitPane.setRightComponent(j);
-    }//GEN-LAST:event_viewContractJbuttonActionPerformed
+        viewDriverJPanel vd = new viewDriverJPanel();
+        SplitPane.setRightComponent(vd);
+    }//GEN-LAST:event_viewDriverJbuttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,29 +139,30 @@ public class ownerJFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ownerJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(driveAdminJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ownerJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(driveAdminJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ownerJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(driveAdminJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ownerJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(driveAdminJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ownerJFrame().setVisible(true);
+                new driveAdminJFrame().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JSplitPane SplitPane;
+    private javax.swing.JButton addDriverJbutton;
     private javax.swing.JPanel controlPanel;
-    private javax.swing.JButton listApartJbutton;
-    private javax.swing.JButton viewContractJbutton;
+    private javax.swing.JButton updateDriverJbutton;
+    private javax.swing.JButton viewDriverJbutton;
     private javax.swing.JPanel workArea;
     // End of variables declaration//GEN-END:variables
 }
