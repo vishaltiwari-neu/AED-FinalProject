@@ -15,13 +15,43 @@ public class Apartment {
     private String address;
     private String cityName;
     private String state;
+    private int bedroom;
+    private float bathroom;
+    private String aptType;
 
-    public Apartment(int owner, String aptNumber, String address, String cityName, String state) {
+    public Apartment(int owner, String aptNumber, String address, String cityName, String state, int bedroom, float bathroom, String aptType) {
         this.ownerId = owner;
         this.aptNumber = aptNumber;
         this.address = address;
         this.cityName = cityName;
         this.state = state;
+        this.bedroom = bedroom;
+        this.bathroom = bathroom;
+        this.aptType = aptType;
+    }
+
+    public int getBedroom() {
+        return bedroom;
+    }
+
+    public void setBedroom(int bedroom) {
+        this.bedroom = bedroom;
+    }
+
+    public float getBathroom() {
+        return bathroom;
+    }
+
+    public void setBathroom(float bathroom) {
+        this.bathroom = bathroom;
+    }
+
+    public String getAptType() {
+        return aptType;
+    }
+
+    public void setAptType(String aptType) {
+        this.aptType = aptType;
     }
     
     

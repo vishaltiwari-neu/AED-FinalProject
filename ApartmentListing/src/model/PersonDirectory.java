@@ -43,7 +43,7 @@ public class PersonDirectory {
 
             Connection con = Database.createConnection();
             Statement statement = con.createStatement();
-            String query = "SELECT * FROM Person where username='"+username+"'";
+            String query = "SELECT * FROM Person where username='"+username+"' and password='"+password+"' ";
             System.out.println(query);
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
@@ -66,5 +66,5 @@ public class PersonDirectory {
         return null;
 
     }    
-
+  
 }

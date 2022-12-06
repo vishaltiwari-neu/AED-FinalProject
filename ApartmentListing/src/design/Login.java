@@ -20,7 +20,7 @@ public class Login extends javax.swing.JPanel {
      */
     public Login() {
         initComponents();
-  
+
         Role[] role = Role.values();
         addRole(role);
     }
@@ -148,7 +148,9 @@ public class Login extends javax.swing.JPanel {
         String password = txtpass.getText();
         Role r = Role.valueOf(choiceRole.getSelectedItem());
         Person p = pd.login(username, password, r);
-        JOptionPane.showMessageDialog(this, p.getUserName());
+        if (p != null) {
+            JOptionPane.showMessageDialog(this, p.getUserName());
+        }
         /*
         int validated = validateInputFields(username, password);
         if (validated == 1) {
@@ -175,7 +177,7 @@ public class Login extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this, "Username does not exist. Please register to login.");
             }
         }
-*/
+         */
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void addRole(Role[] role) {
@@ -184,7 +186,7 @@ public class Login extends javax.swing.JPanel {
             choiceRole.add(r.toString());
         }
     }
-    
+
     private int validateInputFields(String username, String password) {
         //Function to validate the input fields
         int validated = 1;
@@ -198,7 +200,7 @@ public class Login extends javax.swing.JPanel {
         }
         return validated;
     }
-    
+
     private void txtpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpassActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtpassActionPerformed
