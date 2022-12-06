@@ -2,30 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/HP/AED-FinalProject/ApartmentListing/src/design/customerJFrame.java</file>
-            <file>file:/C:/Users/HP/AED-FinalProject/ApartmentListing/src/design/viewContractsJPanel.java</file>
-            <file>file:/C:/Users/HP/AED-FinalProject/ApartmentListing/src/design/LawyerLogin.java</file>
-            <file>file:/C:/Users/HP/AED-FinalProject/ApartmentListing/src/design/addDriverJPanel.java</file>
-            <file>file:/C:/Users/HP/AED-FinalProject/ApartmentListing/src/design/GenerateLease.java</file>
-            <file>file:/C:/Users/HP/AED-FinalProject/ApartmentListing/src/design/BrokerLogin.java</file>
-            <file>file:/C:/Users/HP/AED-FinalProject/ApartmentListing/src/design/ownerJFrame.java</file>
-            <file>file:/C:/Users/HP/AED-FinalProject/ApartmentListing/src/design/BrokerOpenHouse.java</file>
-            <file>file:/C:/Users/HP/AED-FinalProject/ApartmentListing/src/design/Login.java</file>
-=======
-<<<<<<< Updated upstream
-            <file>file:/C:/Users/HP/AED-FinalProject/ApartmentListing/src/apartmentlisting/ApartmentListing.java</file>
-            <file>file:/C:/Users/HP/AED-FinalProject/ApartmentListing/src/UI/SignUp.java</file>
-            <file>file:/C:/Users/HP/AED-FinalProject/ApartmentListing/src/UI/Login.java</file>
-            <file>file:/C:/Users/HP/AED-FinalProject/ApartmentListing/src/UI/MainFrame.java</file>
-=======
-            <file>file:/Users/renuka/AED-FinalProject/ApartmentListing/src/ui/viewContractsJPanel.java</file>
-            <file>file:/Users/renuka/AED-FinalProject/ApartmentListing/src/ui/ownerJFrame.java</file>
-            <file>file:/Users/renuka/AED-FinalProject/ApartmentListing/src/ui/listApartJpanel.java</file>
-            <file>file:/Users/renuka/AED-FinalProject/ApartmentListing/src/apartmentlisting/ApartmentListing.java</file>
->>>>>>> Stashed changes
->>>>>>> new
-        </group>
+        <group/>
     </open-files>
 </project-private>
