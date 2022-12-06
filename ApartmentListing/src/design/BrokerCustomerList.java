@@ -31,6 +31,10 @@ public class BrokerCustomerList extends javax.swing.JPanel {
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
 
+        BrokerCustomerList.setBackground(new java.awt.Color(51, 0, 0));
+
+        jTable1.setBackground(new java.awt.Color(204, 204, 255));
+        jTable1.setForeground(new java.awt.Color(0, 0, 0));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -39,7 +43,7 @@ public class BrokerCustomerList extends javax.swing.JPanel {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Contract ID", "Customer Name", "Cuustomer Contact No", "Customer Type", "Apartment Type", "Beds", "Baths"
+                "Contract ID", "Customer Name", "Customer Contact No", "Customer Type", "Apartment Type", "Beds", "Baths"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -47,8 +51,9 @@ public class BrokerCustomerList extends javax.swing.JPanel {
             jTable1.getColumnModel().getColumn(3).setResizable(false);
         }
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("LIST OF CUSTOMER");
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("LIST OF CUSTOMERs");
 
         javax.swing.GroupLayout BrokerCustomerListLayout = new javax.swing.GroupLayout(BrokerCustomerList);
         BrokerCustomerList.setLayout(BrokerCustomerListLayout);
@@ -61,7 +66,7 @@ public class BrokerCustomerList extends javax.swing.JPanel {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1010, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(BrokerCustomerListLayout.createSequentialGroup()
                         .addGap(255, 255, 255)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
         BrokerCustomerListLayout.setVerticalGroup(

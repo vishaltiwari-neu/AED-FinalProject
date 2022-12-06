@@ -34,6 +34,11 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        controlPanel.setBackground(new java.awt.Color(255, 204, 255));
+
+        loginJbutton.setBackground(new java.awt.Color(0, 0, 0));
+        loginJbutton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        loginJbutton.setForeground(new java.awt.Color(255, 255, 255));
         loginJbutton.setText("Login ");
         loginJbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -41,6 +46,9 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        signupJbutton.setBackground(new java.awt.Color(0, 0, 0));
+        signupJbutton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        signupJbutton.setForeground(new java.awt.Color(255, 255, 255));
         signupJbutton.setText("Sign Up");
         signupJbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,24 +63,19 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(controlPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(signupJbutton)
-                    .addComponent(loginJbutton))
-                .addContainerGap(18, Short.MAX_VALUE))
+                    .addComponent(signupJbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(loginJbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        controlPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {loginJbutton, signupJbutton});
-
         controlPanelLayout.setVerticalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
-                .addGap(156, 156, 156)
-                .addComponent(loginJbutton)
-                .addGap(67, 67, 67)
-                .addComponent(signupJbutton)
-                .addContainerGap(222, Short.MAX_VALUE))
+                .addGap(161, 161, 161)
+                .addComponent(loginJbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47)
+                .addComponent(signupJbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(207, Short.MAX_VALUE))
         );
-
-        controlPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {loginJbutton, signupJbutton});
 
         SplitPane.setLeftComponent(controlPanel);
 
