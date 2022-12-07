@@ -106,7 +106,7 @@ public class Maintainence extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        RaiseRequest rr = new RaiseRequest();
+        RaiseComplaint rr = new RaiseComplaint();
         Maintainence.setRightComponent(rr);
     }//GEN-LAST:event_jButton2ActionPerformed
 

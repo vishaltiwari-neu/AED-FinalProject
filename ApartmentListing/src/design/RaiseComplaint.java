@@ -8,12 +8,12 @@ package design;
  *
  * @author HP
  */
-public class RaiseRequest extends javax.swing.JPanel {
+public class RaiseComplaint extends javax.swing.JPanel {
 
     /**
      * Creates new form RaiseRequest
      */
-    public RaiseRequest() {
+    public RaiseComplaint() {
         initComponents();
     }
 
