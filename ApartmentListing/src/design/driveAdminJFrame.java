@@ -32,8 +32,12 @@ public class driveAdminJFrame extends javax.swing.JFrame {
         viewDriverJbutton = new javax.swing.JButton();
         updateDriverJbutton = new javax.swing.JButton();
         workArea = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        controlPanel.setBackground(new java.awt.Color(102, 102, 102));
+        controlPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         addDriverJbutton.setText("Add Driver");
         addDriverJbutton.addActionListener(new java.awt.event.ActionListener() {
@@ -55,13 +59,12 @@ public class driveAdminJFrame extends javax.swing.JFrame {
         controlPanel.setLayout(controlPanelLayout);
         controlPanelLayout.setHorizontalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(controlPanelLayout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelLayout.createSequentialGroup()
+                .addGap(0, 8, Short.MAX_VALUE)
                 .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(addDriverJbutton)
                     .addComponent(viewDriverJbutton)
-                    .addComponent(updateDriverJbutton))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(updateDriverJbutton)))
         );
 
         controlPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addDriverJbutton, updateDriverJbutton, viewDriverJbutton});
@@ -69,28 +72,30 @@ public class driveAdminJFrame extends javax.swing.JFrame {
         controlPanelLayout.setVerticalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
-                .addGap(123, 123, 123)
+                .addGap(361, 361, 361)
                 .addComponent(addDriverJbutton)
                 .addGap(31, 31, 31)
                 .addComponent(viewDriverJbutton)
                 .addGap(29, 29, 29)
                 .addComponent(updateDriverJbutton)
-                .addContainerGap(246, Short.MAX_VALUE))
+                .addContainerGap(586, Short.MAX_VALUE))
         );
 
         controlPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {addDriverJbutton, updateDriverJbutton, viewDriverJbutton});
 
         SplitPane.setLeftComponent(controlPanel);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/158.png"))); // NOI18N
+
         javax.swing.GroupLayout workAreaLayout = new javax.swing.GroupLayout(workArea);
         workArea.setLayout(workAreaLayout);
         workAreaLayout.setHorizontalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 589, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         workAreaLayout.setVerticalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 498, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         SplitPane.setRightComponent(workArea);
@@ -99,7 +104,7 @@ public class driveAdminJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPane)
+            .addComponent(SplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1738, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -161,6 +166,7 @@ public class driveAdminJFrame extends javax.swing.JFrame {
     private javax.swing.JSplitPane SplitPane;
     private javax.swing.JButton addDriverJbutton;
     private javax.swing.JPanel controlPanel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton updateDriverJbutton;
     private javax.swing.JButton viewDriverJbutton;
     private javax.swing.JPanel workArea;
