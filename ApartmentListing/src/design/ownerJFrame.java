@@ -4,6 +4,8 @@
  */
 package design;
 
+import model.Person;
+
 /**
  *
  * @author renuka
@@ -12,8 +14,12 @@ public class ownerJFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form ownerJFrame
+     * @param person
      */
-    public ownerJFrame() {
+    
+    static Person person;
+    public ownerJFrame(Person person) {
+        this.person = person;
         initComponents();
     }
 
@@ -116,7 +122,7 @@ public class ownerJFrame extends javax.swing.JFrame {
 
     private void listApartJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listApartJbuttonActionPerformed
         // TODO add your handling code here:
-        listApartJpanel l = new listApartJpanel();
+        listApartJpanel l = new listApartJpanel(person);
         SplitPane.setRightComponent(l);
     }//GEN-LAST:event_listApartJbuttonActionPerformed
 
@@ -156,7 +162,7 @@ public class ownerJFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ownerJFrame().setVisible(true);
+                new ownerJFrame(person).setVisible(true);
             }
         });
     }

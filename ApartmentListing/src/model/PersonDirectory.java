@@ -14,11 +14,11 @@ import java.sql.Statement;
  */
 public class PersonDirectory {
 
-    public Person signup(String name, int age, String userName, String password, Role role, String aptNumber, String address, String cityName, String email) {
+    public void signup(String name, int age, String userName, String password, Role role, String aptNumber, String address, String cityName, String email) {
 
         Connection dbConn = Database.createConnection();
 
-        Person person = new Person(name, age, userName, password, role, aptNumber, address, cityName, email);
+//        Person person = new Person(name, age, userName, password, role, aptNumber, address, cityName, email);
 
         String query = "INSERT INTO `Apartment`.`Person` "
                 + "(`name`, `username`, `password`, `age` ,`role`, `aptNumber`, `address`, `city`, `email`) "
@@ -32,9 +32,9 @@ public class PersonDirectory {
         } catch (Exception e) {
 
             System.out.println(e);
-            return null;
+//            return null;
         }
-        return person;
+//        return person;
     }
 
     public Person login(String username, String password, Role role) {
@@ -55,8 +55,8 @@ public class PersonDirectory {
                 Role person_role = Enum.valueOf(Role.class, _role);
                 String email = resultSet.getString("email");
                 String name = resultSet.getString("name");
-//                String name = resultSet.getString("name");
-                Person p = new Person(_name, age, _username, _password, person_role, name, name, name, email);
+                int id = Integer.parseInt(resultSet.getString("id"));
+                Person p = new Person(id, _name, age, _username, _password, person_role, name, name, name, email);
                 return p;
             }
         } catch (Exception e) {

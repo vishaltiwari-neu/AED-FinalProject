@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package design;
+
 import javax.swing.JOptionPane;
 import model.PersonDirectory;
 import model.Person;
@@ -22,7 +23,7 @@ public class Login extends javax.swing.JPanel {
 
         Role[] role = Role.values();
         addRole(role);
-        
+
         //Fetching name in Person Login Frame
         //brokername.setText(pd.getUserName());
     }
@@ -147,20 +148,27 @@ public class Login extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    
-    
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
+
         String username = txtusername.getText();
         String password = txtpass.getText();
         Role r = Role.valueOf(choiceRole.getSelectedItem());
-        
+
         PersonDirectory pd = new PersonDirectory();
-        
-        Person p = pd.login(username, password, r);
-        if (p != null) {
-            JOptionPane.showMessageDialog(this, p.getUserName());
+
+        Person person = pd.login(username, password, r);
+
+        ownerJFrame pageOwner = new ownerJFrame(person);
+        System.out.println(person.getRole());
+        if (person == null){
+            JOptionPane.showMessageDialog(this, "Username does not exist. Please register to login.");
+        }
+        switch (person.getRole().toString()) {
+            case "OWNER" ->
+                pageOwner.setVisible(true);
+                
         }
         /*
         int validated = validateInputFields(username, password);
@@ -173,25 +181,14 @@ public class Login extends javax.swing.JPanel {
                 BrokerLogin pagePatient = new BrokerLogin(pd, person);
                 CustomerLogin pageSysAdmin = new CustomerLogin(pd, person);
                 
-                switch (person.getRole().toString()) {
-                    case "PATIENT" ->
-                        pagePatient.setVisible(true);
-                    case "DOCTOR" ->
-                        pageDoctor.setVisible(true);
-                    case "COMMUNITYADMIN" ->
-                        pageComunity.setVisible(true);
-                    case "SYSADMIN" ->
-                        pageSysAdmin.setVisible(true);
-                }
-
             } else {
                 JOptionPane.showMessageDialog(this, "Username does not exist. Please register to login.");
             }
         }
-*/
+         */
         //if login successfull
-        
-        
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void addRole(Role[] role) {

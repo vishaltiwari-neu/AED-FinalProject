@@ -9,6 +9,7 @@ import static java.time.InstantSource.system;
 import javax.swing.JOptionPane;
 import model.Apartment;
 import model.ApartmentDirectory;
+import model.Person;
 
 /**
  *
@@ -23,8 +24,11 @@ public class listApartJpanel extends javax.swing.JPanel {
     /**
      * Creates new form listApartJpanel
      */
-    public listApartJpanel() {
+    ApartmentDirectory apartmentDirectory = new ApartmentDirectory();
+    Person person;
+    public listApartJpanel(Person person) {
         initComponents();
+        this.person = person;
         
     }
 
@@ -243,11 +247,14 @@ public class listApartJpanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         String ApartmentNumber = addApartJtext.getText();
         String PropertyType = (String) propertyTypeComboBox.getSelectedItem();
-        String Beds = (String) BedsJComboBox.getSelectedItem();
-        String Bath = (String) BathsComboBox.getSelectedItem();
+        int Beds = Integer.parseInt((String) BedsJComboBox.getSelectedItem());
+        float Bath = Float.parseFloat((String) BathsComboBox.getSelectedItem());
         String UnitNumber = unitNoJtext.getText();
         String StreetAddress = streetNameJtext.getText();
         String City = cityJtext.getText();
+        
+        int owner = this.person.getId();
+        apartmentDirectory.addApartment(owner, ApartmentNumber, StreetAddress, City, "MA", Beds , Bath, PropertyType);
 
 
             JOptionPane.showMessageDialog(this,"Apartment Added Succesfully!!");
