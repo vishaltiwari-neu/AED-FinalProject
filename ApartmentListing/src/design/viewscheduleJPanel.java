@@ -61,6 +61,11 @@ public class viewscheduleJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(schedulejTable);
 
         acceptJbutton.setText("Accept Ride");
+        acceptJbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                acceptJbuttonActionPerformed(evt);
+            }
+        });
 
         rejectJbutton.setText("Reject Ride");
         rejectJbutton.addActionListener(new java.awt.event.ActionListener() {
@@ -107,6 +112,11 @@ public class viewscheduleJPanel extends javax.swing.JPanel {
     private void rejectJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rejectJbuttonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rejectJbuttonActionPerformed
+
+    private void acceptJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptJbuttonActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_acceptJbuttonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

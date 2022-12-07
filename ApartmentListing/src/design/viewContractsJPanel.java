@@ -63,7 +63,10 @@ public class viewContractsJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(viewContractJTable);
 
+        add(jScrollPane1);
+
         acceptJbutton.setText("Accept");
+        add(acceptJbutton);
 
         rejectJbutton.setText("Reject");
         rejectJbutton.addActionListener(new java.awt.event.ActionListener() {
@@ -71,63 +74,15 @@ public class viewContractsJPanel extends javax.swing.JPanel {
                 rejectJbuttonActionPerformed(evt);
             }
         });
+        add(rejectJbutton);
 
         RemakJlabel.setText("Remark : ");
+        add(RemakJlabel);
+        add(remakjTextField);
 
         jLabel1.setText("Search : ");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 801, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(jLabel1)
-                        .addGap(26, 26, 26)
-                        .addComponent(searchjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(165, 165, 165)
-                        .addComponent(RemakJlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(remakjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(15, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(acceptJbutton)
-                .addGap(40, 40, 40)
-                .addComponent(rejectJbutton)
-                .addGap(83, 83, 83))
-        );
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {acceptJbutton, rejectJbutton});
-
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(89, 89, 89)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1)
-                    .addComponent(searchjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(98, 98, 98)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RemakJlabel)
-                    .addComponent(remakjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(acceptJbutton)
-                    .addComponent(rejectJbutton))
-                .addContainerGap(99, Short.MAX_VALUE))
-        );
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {acceptJbutton, rejectJbutton});
-
+        add(jLabel1);
+        add(searchjTextField);
     }// </editor-fold>//GEN-END:initComponents
 
     private void rejectJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rejectJbuttonActionPerformed

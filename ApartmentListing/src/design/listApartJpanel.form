@@ -43,91 +43,107 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="96" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="addApartJlable" linkSize="1" max="32767" attributes="0"/>
-                          <Component id="propertyTypeJlable" linkSize="1" max="32767" attributes="0"/>
-                          <Component id="jLabel1" linkSize="1" min="-2" pref="66" max="-2" attributes="0"/>
-                          <Component id="jLabel2" linkSize="1" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                      <Component id="SharedRentJcheckbox" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="addApartJlable" linkSize="1" max="32767" attributes="0"/>
+                              <Component id="propertyTypeJlable" linkSize="1" max="32767" attributes="0"/>
+                              <Component id="jLabel1" linkSize="1" min="-2" pref="66" max="-2" attributes="0"/>
+                              <Component id="jLabel2" linkSize="1" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="BedsJComboBox" alignment="0" max="32767" attributes="0"/>
-                          <Component id="propertyTypeComboBox" alignment="0" pref="131" max="32767" attributes="0"/>
+                          <Component id="propertyTypeComboBox" alignment="0" max="32767" attributes="0"/>
                           <Component id="BathsComboBox" alignment="0" max="32767" attributes="0"/>
-                          <Component id="addApartJtext" max="32767" attributes="0"/>
+                          <Component id="addApartJtext" pref="131" max="32767" attributes="0"/>
+                          <Component id="ownerIDTextField" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="addjbutton" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="unitNoJlabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                  <Component id="unitNoJtext" min="-2" pref="139" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jLabel4" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" min="-2" pref="111" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="184" max="-2" attributes="0"/>
+                              <Component id="addjbutton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="streetNameJtext" max="32767" attributes="0"/>
-                                  <Component id="cityJtext" max="32767" attributes="0"/>
+                                  <Component id="unitNoJlabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" min="-2" pref="111" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                                      <Component id="jLabel4" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="cityJtext" min="-2" pref="132" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="unitNoJtext" pref="139" max="32767" attributes="0"/>
+                                      <Component id="streetNameJtext" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="168" max="-2" attributes="0"/>
-                      <Component id="SharedRentJcheckbox" min="-2" max="-2" attributes="0"/>
-                  </Group>
               </Group>
-              <EmptySpace pref="143" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="addApartJlable" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="addApartJtext" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ownerIDTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="unitNoJlabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="unitNoJtext" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="propertyTypeJlable" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="propertyTypeComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel3" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="streetNameJtext" min="-2" pref="23" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="addApartJlable" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="addApartJtext" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel3" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="streetNameJtext" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="BedsJComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel4" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="cityJtext" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="BathsComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="propertyTypeJlable" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="propertyTypeComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jLabel4" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="BedsJComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="BathsComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="cityJtext" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="SharedRentJcheckbox" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
               <Component id="addjbutton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="243" max="32767" attributes="0"/>
+              <EmptySpace pref="164" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -135,7 +151,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="addApartJlable">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Add Apartment  :"/>
+        <Property name="text" type="java.lang.String" value="Apartment Number :"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="propertyTypeJlable">
@@ -268,6 +284,13 @@
         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new java.awt.Checkbox()"/>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="201"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Owner ID :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="ownerIDTextField">
     </Component>
   </SubComponents>
 </Form>

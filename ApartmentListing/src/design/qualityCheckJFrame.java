@@ -31,9 +31,13 @@ public class qualityCheckJFrame extends javax.swing.JFrame {
         controlPanel = new javax.swing.JPanel();
         raiseReqJbutton = new javax.swing.JButton();
         workArea = new javax.swing.JPanel();
+        pic = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        controlPanel.setBackground(new java.awt.Color(255, 204, 0));
+
+        raiseReqJbutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/question (1).png"))); // NOI18N
         raiseReqJbutton.setText("Raise Request");
         raiseReqJbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -45,30 +49,37 @@ public class qualityCheckJFrame extends javax.swing.JFrame {
         controlPanel.setLayout(controlPanelLayout);
         controlPanelLayout.setHorizontalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(controlPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(raiseReqJbutton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(raiseReqJbutton))
         );
         controlPanelLayout.setVerticalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
-                .addGap(212, 212, 212)
+                .addGap(383, 383, 383)
                 .addComponent(raiseReqJbutton)
-                .addContainerGap(308, Short.MAX_VALUE))
+                .addContainerGap(659, Short.MAX_VALUE))
         );
 
         SplitPane.setLeftComponent(controlPanel);
+
+        pic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/apt.png"))); // NOI18N
+        pic.setText("jLabel1");
 
         javax.swing.GroupLayout workAreaLayout = new javax.swing.GroupLayout(workArea);
         workArea.setLayout(workAreaLayout);
         workAreaLayout.setHorizontalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 667, Short.MAX_VALUE)
+            .addGroup(workAreaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pic, javax.swing.GroupLayout.PREFERRED_SIZE, 1475, Short.MAX_VALUE))
         );
         workAreaLayout.setVerticalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 543, Short.MAX_VALUE)
+            .addGroup(workAreaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pic, javax.swing.GroupLayout.PREFERRED_SIZE, 1068, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         SplitPane.setRightComponent(workArea);
@@ -77,7 +88,7 @@ public class qualityCheckJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPane)
+            .addComponent(SplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1638, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -89,7 +100,7 @@ public class qualityCheckJFrame extends javax.swing.JFrame {
 
     private void raiseReqJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_raiseReqJbuttonActionPerformed
         // TODO add your handling code here:
-        qualityCheckJPanel qp = new qualityCheckJPanel();
+        raiserequestJPanel qp = new raiserequestJPanel();
         SplitPane.setRightComponent(qp);
         
     }//GEN-LAST:event_raiseReqJbuttonActionPerformed
@@ -133,6 +144,7 @@ public class qualityCheckJFrame extends javax.swing.JFrame {
     private javax.swing.JSplitPane SplitPane;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JPanel controlPanel;
+    private javax.swing.JLabel pic;
     private javax.swing.JButton raiseReqJbutton;
     private javax.swing.JPanel workArea;
     // End of variables declaration//GEN-END:variables
