@@ -50,12 +50,12 @@
                       </Group>
                       <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jLabel4" max="32767" attributes="0"/>
-                          <Component id="NameJlabel" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="emailJlabel" alignment="0" max="32767" attributes="0"/>
-                          <Component id="ContactJlabel" alignment="0" max="32767" attributes="0"/>
-                          <Component id="driverIDJlable" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
+                          <Component id="availability" max="32767" attributes="0"/>
+                          <Component id="firstName" alignment="0" max="32767" attributes="0"/>
+                          <Component id="trips" alignment="0" max="32767" attributes="0"/>
+                          <Component id="email" alignment="0" max="32767" attributes="0"/>
+                          <Component id="Contact" alignment="0" max="32767" attributes="0"/>
+                          <Component id="driverID" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
@@ -71,10 +71,10 @@
                                           </Group>
                                           <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lastName" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                                  <Component id="addressJlabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="agejLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="address" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="age" alignment="1" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -82,12 +82,12 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="driverIDjText" min="-2" pref="155" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="jLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="liscenceNumber" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="tripsjText" min="-2" pref="155" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="jLabel3" min="-2" pref="68" max="-2" attributes="0"/>
+                                          <Component id="shift" min="-2" pref="68" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -109,7 +109,7 @@
                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="667" max="32767" attributes="0"/>
+              <EmptySpace pref="581" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -151,34 +151,34 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="driverIDJlable" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="driverID" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="driverIDjText" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="liscenceNumber" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="LnojTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="NameJlabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="firstName" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                               <Component id="FnamejText" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lastName" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="LnamejTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="ContactJlabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Contact" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="contactjText" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="agejLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="age" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="AgejTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="emailJlabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="email" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="emailjText" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="addressJlabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="address" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -188,14 +188,14 @@
                       </Group>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="trips" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="tripsjText" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="shift" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="shiftjTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          <Component id="availability" min="-2" max="-2" attributes="0"/>
                           <Component id="availabilityjDateChooser" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
@@ -233,24 +233,33 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addDriverJbuttonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="NameJlabel">
+    <Component class="javax.swing.JLabel" name="firstName">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Klee" size="18" style="1"/>
+        </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="1" green="1" red="1" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="First Name     :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="lastName">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Klee" size="18" style="1"/>
+        </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="1" green="1" red="1" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Last Name  : "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="ContactJlabel">
+    <Component class="javax.swing.JLabel" name="Contact">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Klee" size="18" style="1"/>
+        </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="1" green="1" red="1" type="rgb"/>
         </Property>
@@ -271,24 +280,33 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="emailJlabel">
+    <Component class="javax.swing.JLabel" name="email">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Klee" size="18" style="1"/>
+        </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="1" green="1" red="1" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Email      :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="addressJlabel">
+    <Component class="javax.swing.JLabel" name="address">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Klee" size="18" style="1"/>
+        </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="1" green="1" red="1" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Address   :  "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="agejLabel">
+    <Component class="javax.swing.JLabel" name="age">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Klee" size="18" style="1"/>
+        </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="1" green="1" red="1" type="rgb"/>
         </Property>
@@ -302,8 +320,11 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="driverIDJlable">
+    <Component class="javax.swing.JLabel" name="driverID">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Klee" size="18" style="1"/>
+        </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="1" green="1" red="1" type="rgb"/>
         </Property>
@@ -323,9 +344,15 @@
           <Color blue="1" green="1" red="1" type="rgb"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="driverIDjTextActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel">
+    <Component class="javax.swing.JLabel" name="liscenceNumber">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Klee" size="18" style="1"/>
+        </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="1" green="1" red="1" type="rgb"/>
         </Property>
@@ -339,8 +366,11 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="trips">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Klee" size="18" style="1"/>
+        </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="1" green="1" red="1" type="rgb"/>
         </Property>
@@ -354,8 +384,11 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="shift">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Klee" size="18" style="1"/>
+        </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="1" green="1" red="1" type="rgb"/>
         </Property>
@@ -372,8 +405,11 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="shiftjTextFieldActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="availability">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Klee" size="18" style="1"/>
+        </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="1" green="1" red="1" type="rgb"/>
         </Property>
