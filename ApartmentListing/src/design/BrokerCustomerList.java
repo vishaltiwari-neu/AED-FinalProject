@@ -51,8 +51,9 @@ public class BrokerCustomerList extends javax.swing.JPanel {
             jTable1.getColumnModel().getColumn(3).setResizable(false);
         }
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/youth.png"))); // NOI18N
         jLabel1.setText("LIST OF CUSTOMERS");
 
         javax.swing.GroupLayout BrokerCustomerListLayout = new javax.swing.GroupLayout(BrokerCustomerList);
@@ -62,21 +63,21 @@ public class BrokerCustomerList extends javax.swing.JPanel {
             .addGroup(BrokerCustomerListLayout.createSequentialGroup()
                 .addGroup(BrokerCustomerListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BrokerCustomerListLayout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1010, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(396, 396, 396)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(BrokerCustomerListLayout.createSequentialGroup()
-                        .addGap(255, 255, 255)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(41, Short.MAX_VALUE))
+                        .addGap(39, 39, 39)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1248, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(341, Short.MAX_VALUE))
         );
         BrokerCustomerListLayout.setVerticalGroup(
             BrokerCustomerListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BrokerCustomerListLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(592, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
