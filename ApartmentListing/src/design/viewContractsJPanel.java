@@ -30,11 +30,17 @@ public class viewContractsJPanel extends javax.swing.JPanel {
         viewContractJTable = new javax.swing.JTable();
         acceptJbutton = new javax.swing.JButton();
         rejectJbutton = new javax.swing.JButton();
-        RemakJlabel = new javax.swing.JLabel();
+        remak = new javax.swing.JLabel();
         remakjTextField = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        search = new javax.swing.JLabel();
         searchjTextField = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 204, 204));
+
+        viewContractJTable.setBackground(new java.awt.Color(204, 204, 204));
+        viewContractJTable.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(1, 1, 1), 1, true));
         viewContractJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null, null, null},
@@ -63,10 +69,7 @@ public class viewContractsJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(viewContractJTable);
 
-        add(jScrollPane1);
-
         acceptJbutton.setText("Accept");
-        add(acceptJbutton);
 
         rejectJbutton.setText("Reject");
         rejectJbutton.addActionListener(new java.awt.event.ActionListener() {
@@ -74,15 +77,76 @@ public class viewContractsJPanel extends javax.swing.JPanel {
                 rejectJbuttonActionPerformed(evt);
             }
         });
-        add(rejectJbutton);
 
-        RemakJlabel.setText("Remark : ");
-        add(RemakJlabel);
-        add(remakjTextField);
+        remak.setText("Remark : ");
 
-        jLabel1.setText("Search : ");
-        add(jLabel1);
-        add(searchjTextField);
+        search.setText("Search : ");
+
+        jLabel1.setFont(new java.awt.Font("Hoefler Text", 1, 36)); // NOI18N
+        jLabel1.setText("View Contracts");
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/contract.png"))); // NOI18N
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(436, 436, 436)
+                        .addComponent(search)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(searchjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(440, 440, 440)
+                        .addComponent(remak)
+                        .addGap(26, 26, 26)
+                        .addComponent(remakjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1273, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(321, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel1)
+                        .addGap(547, 547, 547))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(acceptJbutton)
+                        .addGap(18, 18, 18)
+                        .addComponent(rejectJbutton)
+                        .addGap(151, 151, 151))))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel2)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 310, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(searchjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(search))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(remak)
+                    .addComponent(remakjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(63, 63, 63)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rejectJbutton)
+                    .addComponent(acceptJbutton))
+                .addGap(20, 20, 20))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void rejectJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rejectJbuttonActionPerformed
@@ -91,12 +155,14 @@ public class viewContractsJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel RemakJlabel;
     private javax.swing.JButton acceptJbutton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton rejectJbutton;
+    private javax.swing.JLabel remak;
     private javax.swing.JTextField remakjTextField;
+    private javax.swing.JLabel search;
     private javax.swing.JTextField searchjTextField;
     private javax.swing.JTable viewContractJTable;
     // End of variables declaration//GEN-END:variables

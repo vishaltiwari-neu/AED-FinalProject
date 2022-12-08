@@ -32,25 +32,25 @@ public class addDriverJPanel extends javax.swing.JPanel {
         emailjText = new javax.swing.JTextField();
         AddressjTextField = new javax.swing.JTextField();
         addDriverJbutton = new javax.swing.JButton();
-        NameJlabel = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        ContactJlabel = new javax.swing.JLabel();
+        firstName = new javax.swing.JLabel();
+        lastName = new javax.swing.JLabel();
+        Contact = new javax.swing.JLabel();
         LnamejTextField = new javax.swing.JTextField();
         AgejTextField = new javax.swing.JTextField();
-        emailJlabel = new javax.swing.JLabel();
-        addressJlabel = new javax.swing.JLabel();
-        agejLabel = new javax.swing.JLabel();
+        email = new javax.swing.JLabel();
+        address = new javax.swing.JLabel();
+        age = new javax.swing.JLabel();
         FnamejText = new javax.swing.JTextField();
-        driverIDJlable = new javax.swing.JLabel();
+        driverID = new javax.swing.JLabel();
         contactjText = new javax.swing.JTextField();
         driverIDjText = new javax.swing.JTextField();
-        jLabel = new javax.swing.JLabel();
+        liscenceNumber = new javax.swing.JLabel();
         LnojTextField = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        trips = new javax.swing.JLabel();
         tripsjText = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        shift = new javax.swing.JLabel();
         shiftjTextField = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        availability = new javax.swing.JLabel();
         availabilityjDateChooser = new com.toedter.calendar.JDateChooser();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -82,49 +82,64 @@ public class addDriverJPanel extends javax.swing.JPanel {
             }
         });
 
-        NameJlabel.setForeground(new java.awt.Color(1, 1, 1));
-        NameJlabel.setText("First Name     :");
+        firstName.setFont(new java.awt.Font("Klee", 1, 18)); // NOI18N
+        firstName.setForeground(new java.awt.Color(1, 1, 1));
+        firstName.setText("First Name     :");
 
-        jLabel2.setForeground(new java.awt.Color(1, 1, 1));
-        jLabel2.setText("Last Name  : ");
+        lastName.setFont(new java.awt.Font("Klee", 1, 18)); // NOI18N
+        lastName.setForeground(new java.awt.Color(1, 1, 1));
+        lastName.setText("Last Name  : ");
 
-        ContactJlabel.setForeground(new java.awt.Color(1, 1, 1));
-        ContactJlabel.setText("Contact   :");
+        Contact.setFont(new java.awt.Font("Klee", 1, 18)); // NOI18N
+        Contact.setForeground(new java.awt.Color(1, 1, 1));
+        Contact.setText("Contact   :");
 
         LnamejTextField.setForeground(new java.awt.Color(1, 1, 1));
 
         AgejTextField.setForeground(new java.awt.Color(1, 1, 1));
 
-        emailJlabel.setForeground(new java.awt.Color(1, 1, 1));
-        emailJlabel.setText("Email      :");
+        email.setFont(new java.awt.Font("Klee", 1, 18)); // NOI18N
+        email.setForeground(new java.awt.Color(1, 1, 1));
+        email.setText("Email      :");
 
-        addressJlabel.setForeground(new java.awt.Color(1, 1, 1));
-        addressJlabel.setText("Address   :  ");
+        address.setFont(new java.awt.Font("Klee", 1, 18)); // NOI18N
+        address.setForeground(new java.awt.Color(1, 1, 1));
+        address.setText("Address   :  ");
 
-        agejLabel.setForeground(new java.awt.Color(1, 1, 1));
-        agejLabel.setText("Age   :   ");
+        age.setFont(new java.awt.Font("Klee", 1, 18)); // NOI18N
+        age.setForeground(new java.awt.Color(1, 1, 1));
+        age.setText("Age   :   ");
 
         FnamejText.setForeground(new java.awt.Color(1, 1, 1));
 
-        driverIDJlable.setForeground(new java.awt.Color(1, 1, 1));
-        driverIDJlable.setText("Driver ID  : ");
+        driverID.setFont(new java.awt.Font("Klee", 1, 18)); // NOI18N
+        driverID.setForeground(new java.awt.Color(1, 1, 1));
+        driverID.setText("Driver ID  : ");
 
         contactjText.setForeground(new java.awt.Color(1, 1, 1));
 
         driverIDjText.setForeground(new java.awt.Color(1, 1, 1));
+        driverIDjText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                driverIDjTextActionPerformed(evt);
+            }
+        });
 
-        jLabel.setForeground(new java.awt.Color(1, 1, 1));
-        jLabel.setText("Liscence Number   : ");
+        liscenceNumber.setFont(new java.awt.Font("Klee", 1, 18)); // NOI18N
+        liscenceNumber.setForeground(new java.awt.Color(1, 1, 1));
+        liscenceNumber.setText("Liscence Number   : ");
 
         LnojTextField.setForeground(new java.awt.Color(1, 1, 1));
 
-        jLabel1.setForeground(new java.awt.Color(1, 1, 1));
-        jLabel1.setText("Total No. of trips compelted   :");
+        trips.setFont(new java.awt.Font("Klee", 1, 18)); // NOI18N
+        trips.setForeground(new java.awt.Color(1, 1, 1));
+        trips.setText("Total No. of trips compelted   :");
 
         tripsjText.setForeground(new java.awt.Color(1, 1, 1));
 
-        jLabel3.setForeground(new java.awt.Color(1, 1, 1));
-        jLabel3.setText("Shift   : ");
+        shift.setFont(new java.awt.Font("Klee", 1, 18)); // NOI18N
+        shift.setForeground(new java.awt.Color(1, 1, 1));
+        shift.setText("Shift   : ");
 
         shiftjTextField.setForeground(new java.awt.Color(1, 1, 1));
         shiftjTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -133,8 +148,9 @@ public class addDriverJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel4.setForeground(new java.awt.Color(1, 1, 1));
-        jLabel4.setText("Availability   :");
+        availability.setFont(new java.awt.Font("Klee", 1, 18)); // NOI18N
+        availability.setForeground(new java.awt.Color(1, 1, 1));
+        availability.setText("Availability   :");
 
         availabilityjDateChooser.setForeground(new java.awt.Color(1, 1, 1));
 
@@ -179,12 +195,12 @@ public class addDriverJPanel extends javax.swing.JPanel {
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(60, 60, 60)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(NameJlabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(emailJlabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ContactJlabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(driverIDJlable, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(availability, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(firstName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(trips, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(email, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Contact, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(driverID, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(19, 19, 19)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(addDriverJbutton)
@@ -198,19 +214,19 @@ public class addDriverJPanel extends javax.swing.JPanel {
                                                 .addComponent(contactjText, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGap(71, 71, 71)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel2)
+                                                .addComponent(lastName)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(addressJlabel)
-                                                    .addComponent(agejLabel))))
+                                                    .addComponent(address)
+                                                    .addComponent(age))))
                                         .addComponent(emailjText, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(layout.createSequentialGroup()
                                             .addComponent(driverIDjText, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel))
+                                            .addComponent(liscenceNumber))
                                         .addGroup(layout.createSequentialGroup()
                                             .addComponent(tripsjText, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(shift, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(AgejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -223,7 +239,7 @@ public class addDriverJPanel extends javax.swing.JPanel {
                         .addComponent(jLabel5)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel6)))
-                .addContainerGap(667, Short.MAX_VALUE))
+                .addContainerGap(581, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel10, jLabel8, jLabel9});
@@ -259,42 +275,42 @@ public class addDriverJPanel extends javax.swing.JPanel {
                         .addGap(368, 368, 368))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(driverIDJlable)
+                            .addComponent(driverID)
                             .addComponent(driverIDjText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel)
+                            .addComponent(liscenceNumber)
                             .addComponent(LnojTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(24, 24, 24)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(NameJlabel)
+                            .addComponent(firstName)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(FnamejText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel2)
+                                .addComponent(lastName)
                                 .addComponent(LnamejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(31, 31, 31)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ContactJlabel)
+                            .addComponent(Contact)
                             .addComponent(contactjText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(agejLabel)
+                            .addComponent(age)
                             .addComponent(AgejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(22, 22, 22)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(emailJlabel)
+                                    .addComponent(email)
                                     .addComponent(emailjText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(addressJlabel)))
+                                    .addComponent(address)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addComponent(AddressjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(30, 30, 30)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
+                            .addComponent(trips)
                             .addComponent(tripsjText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)
+                            .addComponent(shift)
                             .addComponent(shiftjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
+                            .addComponent(availability)
                             .addComponent(availabilityjDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(24, 24, 24)
                         .addComponent(addDriverJbutton)
@@ -315,17 +331,16 @@ public class addDriverJPanel extends javax.swing.JPanel {
 
     private void addDriverJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addDriverJbuttonActionPerformed
         // TODO add your handling code here:
-         String driverIDJlable = driverIDjText.getText();
-        String NameJlabel = (String) FnamejText.getText();
-        String ContactJlabel = (String) contactjText.getText();
-        String emailJlabel = (String) emailjText.getText();
-        String jLable1 = tripsjText.getText();
-        String City = LnojTextField.getText();
-        String jLabel = LnamejTextField.getText();
-        String agejLabel = AgejTextField.getText();
-        String addressJlabel = AddressjTextField.getText();
-        String jlabel2 = LnamejTextField.getText();
-        String jlabel3 = shiftjTextField.getText();
+         String driverID = driverIDjText.getText();
+        String firstName = (String) FnamejText.getText();
+        String contact = (String) contactjText.getText();
+        String email = (String) emailjText.getText();
+        String trips = tripsjText.getText();
+        String liscenceNumber = LnojTextField.getText();
+        String lastName = LnamejTextField.getText();
+        String age = AgejTextField.getText();
+        String address = AddressjTextField.getText();
+        String shift = shiftjTextField.getText();
 
             JOptionPane.showMessageDialog(this,"Driver Added Succesfully!!");
             
@@ -343,32 +358,32 @@ public class addDriverJPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_addDriverJbuttonActionPerformed
 
+    private void driverIDjTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_driverIDjTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_driverIDjTextActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField AddressjTextField;
     private javax.swing.JTextField AgejTextField;
-    private javax.swing.JLabel ContactJlabel;
+    private javax.swing.JLabel Contact;
     private javax.swing.JTextField FnamejText;
     private javax.swing.JTextField LnamejTextField;
     private javax.swing.JTextField LnojTextField;
-    private javax.swing.JLabel NameJlabel;
     private javax.swing.JButton addDriverJbutton;
-    private javax.swing.JLabel addressJlabel;
-    private javax.swing.JLabel agejLabel;
+    private javax.swing.JLabel address;
+    private javax.swing.JLabel age;
+    private javax.swing.JLabel availability;
     private com.toedter.calendar.JDateChooser availabilityjDateChooser;
     private javax.swing.JTextField contactjText;
-    private javax.swing.JLabel driverIDJlable;
+    private javax.swing.JLabel driverID;
     private javax.swing.JTextField driverIDjText;
-    private javax.swing.JLabel emailJlabel;
+    private javax.swing.JLabel email;
     private javax.swing.JTextField emailjText;
+    private javax.swing.JLabel firstName;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -376,7 +391,11 @@ public class addDriverJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lastName;
+    private javax.swing.JLabel liscenceNumber;
+    private javax.swing.JLabel shift;
     private javax.swing.JTextField shiftjTextField;
+    private javax.swing.JLabel trips;
     private javax.swing.JTextField tripsjText;
     // End of variables declaration//GEN-END:variables
 }
