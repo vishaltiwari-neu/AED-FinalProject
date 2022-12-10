@@ -7,21 +7,24 @@ package model;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
- * @author visha_wb3uzfg
+ * @author HP
  */
 public class PersonDirectory {
-
-    public void signup(String name, int age, String userName, String password, Role role, String aptNumber, String address, String cityName, String email) {
+    
+    
+    public void signup(String name, int age, String userName, String password, Role role, String contactNumber, String address, String cityName, String email) {
 
         Connection dbConn = Database.createConnection();
 
 //        Person person = new Person(name, age, userName, password, role, aptNumber, address, cityName, email);
         String query = "INSERT INTO `Apartment`.`Person` "
-                + "(`name`, `username`, `password`, `age` ,`role`, `aptNumber`, `address`, `city`, `email`) "
-                + "VALUES ('" + name + "', '" + userName + "', '" + password + "',  '" + age + "' , '" + role + "', '" + aptNumber + "', '" + address + "', '" + cityName + "', '" + email + "')";
+                + "(`name`, `username`, `password`, `age` ,`role`, `contactnumber`, `address`, `city`, `email`) "
+                + "VALUES ('" + name + "', '" + userName + "', '" + password + "',  '" + age + "' , '" + role + "', '" + contactNumber + "', '" + address + "', '" + cityName + "', '" + email + "')";
         System.out.println(query);
         try {
 
@@ -93,4 +96,33 @@ public class PersonDirectory {
         return null;
 
     }
+
+    public List<Person> getPersonListByRole(Role role) {
+        List<Person> brokerList = new ArrayList<>();
+        try {
+
+            Connection con = Database.createConnection();
+            Statement statement = con.createStatement();
+            String query = "SELECT * FROM person where role='" + role.toString() + "'";
+            System.out.println(query);
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String _name = resultSet.getString("name");
+                String _username = resultSet.getString("username");
+                String _password = resultSet.getString("password");
+                int age = resultSet.getInt("age");
+                String _role = resultSet.getString("role");
+                Role person_role = Enum.valueOf(Role.class, _role);
+                String email = resultSet.getString("email");
+                String name = resultSet.getString("contactnumber");
+                Person p = new Person(id, _name, age, _username, _password, person_role, name, name, name, email);
+                brokerList.add(p);
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+            return null;
+        }
+        return brokerList;
+    } 
 }

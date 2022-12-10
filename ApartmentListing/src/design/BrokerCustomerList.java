@@ -32,6 +32,7 @@ public class BrokerCustomerList extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
 
         BrokerCustomerList.setBackground(new java.awt.Color(51, 0, 0));
+        BrokerCustomerList.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setBackground(new java.awt.Color(204, 204, 255));
         jTable1.setForeground(new java.awt.Color(0, 0, 0));
@@ -51,45 +52,25 @@ public class BrokerCustomerList extends javax.swing.JPanel {
             jTable1.getColumnModel().getColumn(3).setResizable(false);
         }
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("LIST OF CUSTOMERS");
+        BrokerCustomerList.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 109, 940, 420));
 
-        javax.swing.GroupLayout BrokerCustomerListLayout = new javax.swing.GroupLayout(BrokerCustomerList);
-        BrokerCustomerList.setLayout(BrokerCustomerListLayout);
-        BrokerCustomerListLayout.setHorizontalGroup(
-            BrokerCustomerListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BrokerCustomerListLayout.createSequentialGroup()
-                .addGroup(BrokerCustomerListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BrokerCustomerListLayout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1010, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(BrokerCustomerListLayout.createSequentialGroup()
-                        .addGap(255, 255, 255)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(41, Short.MAX_VALUE))
-        );
-        BrokerCustomerListLayout.setVerticalGroup(
-            BrokerCustomerListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BrokerCustomerListLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(62, Short.MAX_VALUE))
-        );
+        jLabel1.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/youth.png"))); // NOI18N
+        jLabel1.setText("LIST OF CUSTOMERS");
+        BrokerCustomerList.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 340, 80));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(BrokerCustomerList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BrokerCustomerList, javax.swing.GroupLayout.PREFERRED_SIZE, 1050, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BrokerCustomerList, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(BrokerCustomerList, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 571, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
