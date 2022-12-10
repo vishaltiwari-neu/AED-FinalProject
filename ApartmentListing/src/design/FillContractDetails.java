@@ -137,7 +137,7 @@ public class FillContractDetails extends javax.swing.JPanel {
         add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 510, 98, 42));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/fillcontract.jpg"))); // NOI18N
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 170, 280, 180));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 170, 280, 180));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
