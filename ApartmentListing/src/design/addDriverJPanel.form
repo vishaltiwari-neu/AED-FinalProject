@@ -434,7 +434,7 @@
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/design/license (1) (1).png"/>
+          <Image iconType="3" name="/resources/license (1) (1).png"/>
         </Property>
       </Properties>
     </Component>
@@ -483,7 +483,7 @@
     <Component class="javax.swing.JLabel" name="jLabel11">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/design/he.png"/>
+          <Image iconType="3" name="/resources/he.png"/>
         </Property>
       </Properties>
     </Component>

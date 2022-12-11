@@ -145,7 +145,7 @@ public class raiserequestJPanel extends javax.swing.JPanel {
         otherUtilitiesjlabel.setFont(new java.awt.Font("Klee", 0, 18)); // NOI18N
         otherUtilitiesjlabel.setText("Other Utilities : ");
 
-        apt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/apartment.png"))); // NOI18N
+        apt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resouces/apartment.png"))); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("PilGi", 1, 36)); // NOI18N
         jLabel6.setText("Happiness lies in Cleanliness");
@@ -153,7 +153,7 @@ public class raiserequestJPanel extends javax.swing.JPanel {
         jLabel8.setFont(new java.awt.Font("Hoefler Text", 1, 36)); // NOI18N
         jLabel8.setText("Raise Request Form");
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/59.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resouces/59.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

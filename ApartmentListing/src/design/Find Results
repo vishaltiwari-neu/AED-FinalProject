@@ -1,0 +1,47 @@
+Searching 59 files for "resourses"
+
+/Users/renuka/AED-FinalProject/ApartmentListing/src/design/listingsJPanel.form:
+  177        <Properties>
+  178          <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+  179:           <Image iconType="3" name="/resources/newlist.png"/>
+  180          </Property>
+  181          <Property name="text" type="java.lang.String" value="jLabel5"/>
+
+/Users/renuka/AED-FinalProject/ApartmentListing/src/design/listingsJPanel.java:
+  107          add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 610, -1, -1));
+  108  
+  109:         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/newlist.png"))); // NOI18N
+  110          jLabel5.setText("jLabel5");
+  111          add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 0, 2070, 1080));
+
+/Users/renuka/AED-FinalProject/ApartmentListing/src/design/viewBrokerJPanel.form:
+  161        <Properties>
+  162          <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+  163:           <Image iconType="3" name="/resources/broker (2).png"/>
+  164          </Property>
+  165        </Properties>
+  ...
+  173        <Properties>
+  174          <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+  175:           <Image iconType="3" name="/resources/backgroundbrp.png"/>
+  176          </Property>
+  177        </Properties>
+
+/Users/renuka/AED-FinalProject/ApartmentListing/src/design/viewBrokerJPanel.java:
+  101          add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 70, -1, -1));
+  102  
+  103:         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/broker (2).png"))); // NOI18N
+  104          add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 70, 70));
+  105  
+  106:         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/backgroundbrp.png"))); // NOI18N
+  107          add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -60, 1670, 1140));
+  108      }// </editor-fold>//GEN-END:initComponents
+
+/Users/renuka/AED-FinalProject/ApartmentListing/src/design/viewscheduleJPanel.java:
+  111          add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 260, -1, -1));
+  112  
+  113:         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/1650driver.png"))); // NOI18N
+  114          add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -170, 1690, 1390));
+  115      }// </editor-fold>//GEN-END:initComponents
+
+7 matches across 5 files

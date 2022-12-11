@@ -70,7 +70,7 @@ public class AdminJFrame extends javax.swing.JFrame {
         });
         controlPanel.add(viewListingJbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 110, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/1k.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/1k.png"))); // NOI18N
         controlPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 130, 870));
 
         SplitPane.setLeftComponent(controlPanel);
@@ -81,7 +81,7 @@ public class AdminJFrame extends javax.swing.JFrame {
         jLabel3.setText("Hello!!");
         workArea.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 70, 170, 140));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/mil.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mil.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         workArea.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, -3, 1320, 850));
 
@@ -91,11 +91,11 @@ public class AdminJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPane, javax.swing.GroupLayout.PREFERRED_SIZE, 834, Short.MAX_VALUE)
+            .addComponent(SplitPane, javax.swing.GroupLayout.PREFERRED_SIZE, 980, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPane, javax.swing.GroupLayout.PREFERRED_SIZE, 538, Short.MAX_VALUE)
+            .addComponent(SplitPane, javax.swing.GroupLayout.PREFERRED_SIZE, 703, Short.MAX_VALUE)
         );
 
         pack();

@@ -64,7 +64,7 @@ public class viewContractsJPanel extends javax.swing.JPanel {
         workArea.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 60, 300, -1));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/handshake (1).png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resouces/handshake (1).png"))); // NOI18N
         workArea.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 40, 80, 60));
 
         viewContractJTable.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.hoverBorderColor"));
@@ -124,7 +124,7 @@ public class viewContractsJPanel extends javax.swing.JPanel {
         signOutjButton.setText("Sign Out");
         workArea.add(signOutjButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 530, 90, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/contracts.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resouces/contracts.png"))); // NOI18N
         workArea.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -90, 1280, 990));
 
         remak1.setText("Remark : ");

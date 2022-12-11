@@ -114,7 +114,7 @@ public class createBrokerJPanel extends javax.swing.JPanel {
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 90, -1));
         add(brokerIDjText, new org.netbeans.lib.awtextra.AbsoluteConstraints(363, 280, 155, 20));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/broker (4).png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/broker (4).png"))); // NOI18N
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 70, -1, -1));
 
         jButton2.setText("Sign Out");
@@ -125,7 +125,7 @@ public class createBrokerJPanel extends javax.swing.JPanel {
         });
         add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 510, 90, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/createbroker.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/createbroker.png"))); // NOI18N
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1650, 1080));
     }// </editor-fold>//GEN-END:initComponents
 

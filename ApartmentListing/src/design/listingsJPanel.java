@@ -90,7 +90,7 @@ public class listingsJPanel extends javax.swing.JPanel {
         rejectJbutton.setText("Reject");
         add(rejectJbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 610, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/apartment (2).png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/apartment (2).png"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 80, 97, 85));
 
         jLabel2.setFont(new java.awt.Font("Hoefler Text", 1, 36)); // NOI18N
@@ -106,7 +106,7 @@ public class listingsJPanel extends javax.swing.JPanel {
         jButton1.setText("Sign Out");
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 610, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/newlist.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/newlist.png"))); // NOI18N
         jLabel5.setText("jLabel5");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 0, 2070, 1080));
     }// </editor-fold>//GEN-END:initComponents

@@ -100,10 +100,10 @@ public class viewBrokerJPanel extends javax.swing.JPanel {
         jLabel2.setText("View Broker");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 70, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/broker (2).png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/broker (2).png"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 70, 70));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/backgroundbrp.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/backgroundbrp.png"))); // NOI18N
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -60, 1670, 1140));
     }// </editor-fold>//GEN-END:initComponents
 

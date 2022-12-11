@@ -104,13 +104,13 @@ public class viewscheduleJPanel extends javax.swing.JPanel {
         jLabel1.setText("View Schedule");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 80, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/on-time.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/on-time.png"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 60, -1, -1));
 
         jLabel4.setText("jLabel4");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 260, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/1650driver.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/1650driver.png"))); // NOI18N
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -170, 1690, 1390));
     }// </editor-fold>//GEN-END:initComponents
 

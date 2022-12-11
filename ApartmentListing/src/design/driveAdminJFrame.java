@@ -80,7 +80,7 @@ public class driveAdminJFrame extends javax.swing.JFrame {
 
         SplitPane.setLeftComponent(controlPanel);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/158.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/158.png"))); // NOI18N
 
         javax.swing.GroupLayout workAreaLayout = new javax.swing.GroupLayout(workArea);
         workArea.setLayout(workAreaLayout);

@@ -157,7 +157,7 @@ public class addDriverJPanel extends javax.swing.JPanel {
         jLabel5.setFont(new java.awt.Font("Hoefler Text", 1, 36)); // NOI18N
         jLabel5.setText("Add Driver Details");
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/license (1) (1).png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/license (1) (1).png"))); // NOI18N
 
         jLabel7.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
@@ -171,7 +171,7 @@ public class addDriverJPanel extends javax.swing.JPanel {
         jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jScrollPane1.setViewportView(jTextArea1);
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/he.png"))); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/he.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

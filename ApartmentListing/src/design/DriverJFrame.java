@@ -45,7 +45,7 @@ public class DriverJFrame extends javax.swing.JFrame {
         });
         controlPanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, -1, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/1k.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/1k.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         controlPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -130, 130, 1190));
 
@@ -53,7 +53,7 @@ public class DriverJFrame extends javax.swing.JFrame {
 
         workArea.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/driver123.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/driver123.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         workArea.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -170, 1520, 1180));
 

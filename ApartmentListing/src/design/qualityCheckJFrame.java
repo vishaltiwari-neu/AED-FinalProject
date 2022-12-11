@@ -38,7 +38,7 @@ public class qualityCheckJFrame extends javax.swing.JFrame {
 
         controlPanel.setBackground(new java.awt.Color(255, 204, 0));
 
-        raiseReqJbutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/question (1).png"))); // NOI18N
+        raiseReqJbutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/question (1).png"))); // NOI18N
         raiseReqJbutton.setText("Raise Request");
         raiseReqJbutton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         raiseReqJbutton.addActionListener(new java.awt.event.ActionListener() {
@@ -80,7 +80,7 @@ public class qualityCheckJFrame extends javax.swing.JFrame {
 
         SplitPane.setLeftComponent(controlPanel);
 
-        pic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/apt.png"))); // NOI18N
+        pic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/apt.png"))); // NOI18N
         pic.setText("jLabel1");
 
         javax.swing.GroupLayout workAreaLayout = new javax.swing.GroupLayout(workArea);

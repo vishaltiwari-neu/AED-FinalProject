@@ -429,7 +429,7 @@
     <Component class="javax.swing.JLabel" name="apt">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/design/apartment.png"/>
+          <Image iconType="3" name="/resources/apartment.png"/>
         </Property>
       </Properties>
     </Component>
@@ -452,7 +452,7 @@
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/design/59.png"/>
+          <Image iconType="3" name="/resources/59.png"/>
         </Property>
       </Properties>
     </Component>

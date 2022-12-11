@@ -71,9 +71,9 @@ public class viewDriverJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Hoefler Text", 1, 36)); // NOI18N
         jLabel1.setText("View Driver Details");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/license.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/license.png"))); // NOI18N
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/49.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/49.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

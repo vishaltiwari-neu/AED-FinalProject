@@ -19,8 +19,8 @@ public class Person {
     private String email;
     private Role role;
 
-    public Person(String name, int age, String userName, String password, Role role, String aptNumber, String address, String cityName, String email) {
-//        this.id = id;
+    public Person(int id, String name, int age, String userName, String password, Role role, String aptNumber, String address, String cityName, String email) {
+        this.id = id;
         this.name = name;
         this.age = age;
         this.userName = userName;

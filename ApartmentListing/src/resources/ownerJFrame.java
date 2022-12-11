@@ -2,7 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package design;
+package resources;
+
+import design.viewContractsJPanel;
+import model.Person;
 
 /**
  *
@@ -12,8 +15,12 @@ public class ownerJFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form ownerJFrame
+     * @param person
      */
-    public ownerJFrame() {
+    
+    static Person person;
+    public ownerJFrame(Person person) {
+        this.person = person;
         initComponents();
     }
 
@@ -30,12 +37,14 @@ public class ownerJFrame extends javax.swing.JFrame {
         controlPanel = new javax.swing.JPanel();
         listApartJbutton = new javax.swing.JButton();
         viewContractJbutton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         workArea = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         controlPanel.setBackground(new java.awt.Color(153, 153, 153));
+        controlPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         listApartJbutton.setText("List Apartment");
         listApartJbutton.addActionListener(new java.awt.event.ActionListener() {
@@ -43,6 +52,7 @@ public class ownerJFrame extends javax.swing.JFrame {
                 listApartJbuttonActionPerformed(evt);
             }
         });
+        controlPanel.add(listApartJbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 419, 143, -1));
 
         viewContractJbutton.setText("View Contracts");
         viewContractJbutton.addActionListener(new java.awt.event.ActionListener() {
@@ -50,32 +60,11 @@ public class ownerJFrame extends javax.swing.JFrame {
                 viewContractJbuttonActionPerformed(evt);
             }
         });
+        controlPanel.add(viewContractJbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 504, 143, -1));
 
-        javax.swing.GroupLayout controlPanelLayout = new javax.swing.GroupLayout(controlPanel);
-        controlPanel.setLayout(controlPanelLayout);
-        controlPanelLayout.setHorizontalGroup(
-            controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(controlPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(listApartJbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(viewContractJbutton)))
-                .addContainerGap())
-        );
-
-        controlPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {listApartJbutton, viewContractJbutton});
-
-        controlPanelLayout.setVerticalGroup(
-            controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(controlPanelLayout.createSequentialGroup()
-                .addGap(419, 419, 419)
-                .addComponent(listApartJbutton)
-                .addGap(62, 62, 62)
-                .addComponent(viewContractJbutton)
-                .addContainerGap(1112, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/1k.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        controlPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -360, 160, 1640));
 
         SplitPane.setLeftComponent(controlPanel);
 
@@ -86,16 +75,14 @@ public class ownerJFrame extends javax.swing.JFrame {
         workAreaLayout.setHorizontalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(workAreaLayout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 12, Short.MAX_VALUE))
         );
         workAreaLayout.setVerticalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, workAreaLayout.createSequentialGroup()
-                .addContainerGap(630, Short.MAX_VALUE)
+            .addGroup(workAreaLayout.createSequentialGroup()
                 .addComponent(jLabel1)
-                .addContainerGap())
+                .addGap(0, 637, Short.MAX_VALUE))
         );
 
         SplitPane.setRightComponent(workArea);
@@ -116,7 +103,7 @@ public class ownerJFrame extends javax.swing.JFrame {
 
     private void listApartJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listApartJbuttonActionPerformed
         // TODO add your handling code here:
-        listApartJpanel l = new listApartJpanel();
+        listApartJpanel l = new listApartJpanel(person);
         SplitPane.setRightComponent(l);
     }//GEN-LAST:event_listApartJbuttonActionPerformed
 
@@ -156,7 +143,7 @@ public class ownerJFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ownerJFrame().setVisible(true);
+                new ownerJFrame(person).setVisible(true);
             }
         });
     }
@@ -165,6 +152,7 @@ public class ownerJFrame extends javax.swing.JFrame {
     private javax.swing.JSplitPane SplitPane;
     private javax.swing.JPanel controlPanel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JButton listApartJbutton;
     private javax.swing.JButton viewContractJbutton;
     private javax.swing.JPanel workArea;
