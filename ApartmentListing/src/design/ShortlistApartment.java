@@ -4,6 +4,13 @@
  */
 package design;
 
+import java.util.Dictionary;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+import model.ApartmentDirectory;
+import model.BrokerDirectory;
+import model.Person;
+
 /**
  *
  * @author HP
@@ -13,8 +20,13 @@ public class ShortlistApartment extends javax.swing.JPanel {
     /**
      * Creates new form ShortlistApartment
      */
-    public ShortlistApartment() {
+    ApartmentDirectory aptdirectory = new ApartmentDirectory();
+    private static Person person;
+    public ShortlistApartment(Person person) {
         initComponents();
+        List<Dictionary> apartments = aptdirectory.getApartments();
+        populateTable(apartments);
+        this.person = person;
     }
 
     /**
@@ -49,26 +61,24 @@ public class ShortlistApartment extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Sitka Text", 3, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/apartments.png"))); // NOI18N
         jLabel1.setText("SHORTLIST APARTMENTS");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 390, 80));
 
         jLabel2.setFont(new java.awt.Font("Sitka Text", 3, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/search.png"))); // NOI18N
         jLabel2.setText("Search By:");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 150, 46));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Property Type", "Location", "Beds", "Baths", "Rent", "Broker", "Broker Contact", "Owner ", "Owner Contact"
+                "Apt ID", "Property Type", "Location", "Beds", "Baths", "Rent", "Owner ", "Owner Contact"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -87,28 +97,23 @@ public class ShortlistApartment extends javax.swing.JPanel {
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 550, 240, 44));
 
         jLabel3.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Property Type:");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 130, -1));
 
         jLabel4.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Location:");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 80, 20));
 
         jLabel5.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Beds:");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, 48, -1));
 
         jLabel6.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Rent:");
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, 41, -1));
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 284, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Baths:");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 130, 48, -1));
 
@@ -133,6 +138,11 @@ public class ShortlistApartment extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        BrokerDirectory bd = new BrokerDirectory();
+        int row = jTable1.getSelectedRow();
+        int value = Integer.parseInt(jTable1.getModel().getValueAt(row, 0).toString());
+        bd.assignBroker(value, person.getId());
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
@@ -155,4 +165,23 @@ public class ShortlistApartment extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
+
+    private void populateTable(List<Dictionary> apartmentList) {
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+
+        model.setRowCount(0);
+        for (Dictionary d : apartmentList) {
+//            VitalRecord vr = e.getVital();
+            Object[] row = new Object[8];
+            row[0] = d.get("aptid");
+            row[1] = d.get("apttype");
+            row[2] = d.get("city");
+            row[3] = d.get("bedroom");
+            row[4] = d.get("bathroom");
+            row[5] = 0;//d.get("0");
+            row[6] = d.get("owner");
+            row[7] = d.get("ownerContact");
+            model.addRow(row);
+        }
+    }
 }

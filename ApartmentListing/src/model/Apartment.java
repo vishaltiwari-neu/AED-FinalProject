@@ -18,8 +18,9 @@ public class Apartment {
     private int bedroom;
     private float bathroom;
     private String aptType;
+    private int rent;
 
-    public Apartment(int owner, String aptNumber, String address, String cityName, String state, int bedroom, float bathroom, String aptType) {
+    public Apartment(int owner, String aptNumber, String address, String cityName, String state, int bedroom, float bathroom, String aptType, int rent) {
         this.ownerId = owner;
         this.aptNumber = aptNumber;
         this.address = address;
@@ -28,6 +29,7 @@ public class Apartment {
         this.bedroom = bedroom;
         this.bathroom = bathroom;
         this.aptType = aptType;
+        this.rent = rent;
     }
 
     public int getBedroom() {

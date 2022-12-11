@@ -4,6 +4,11 @@
  */
 package design;
 
+import java.util.Dictionary;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+import model.ApartmentDirectory;
+
 /**
  *
  * @author renuka
@@ -13,8 +18,32 @@ public class listingsJPanel extends javax.swing.JPanel {
     /**
      * Creates new form listingsJPanel
      */
+    ApartmentDirectory aptdirectory = new ApartmentDirectory();
+
     public listingsJPanel() {
         initComponents();
+        List<Dictionary> apartments = aptdirectory.getApartments();
+        populateTable(apartments);
+    }
+
+    private void populateTable(List<Dictionary> apartmentList) {
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+
+        model.setRowCount(0);
+        for (Dictionary d : apartmentList) {
+//            VitalRecord vr = e.getVital();
+            Object[] row = new Object[9];
+            row[0] = d.get("apttype");
+            row[1] = d.get("city");
+            row[2] = d.get("bedroom");
+            row[3] = d.get("bathroom");
+            row[4] = 0;//d.get("0");
+            row[5] = 0;//d.get("0");
+            row[6] = 0;//d.get("0");
+            row[7] = d.get("owner");
+            row[8] = d.get("ownerContact");
+            model.addRow(row);
+        }
     }
 
     /**

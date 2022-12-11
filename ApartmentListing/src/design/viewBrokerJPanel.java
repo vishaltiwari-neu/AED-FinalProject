@@ -4,6 +4,12 @@
  */
 package design;
 
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+import model.Person;
+import model.PersonDirectory;
+import model.Role;
+
 /**
  *
  * @author renuka
@@ -14,7 +20,30 @@ public class viewBrokerJPanel extends javax.swing.JPanel {
      * Creates new form viewBrokerJPanel
      */
     public viewBrokerJPanel() {
+
         initComponents();
+        PersonDirectory personDirectory = new PersonDirectory();
+        List<Person> brokerList = personDirectory.getPersonListByRole(Role.BROKER);
+        populateTable(brokerList);
+    }
+
+    private void populateTable(List<Person> brokerList) {
+        DefaultTableModel model = (DefaultTableModel) viewBrokerjTable.getModel();
+
+        model.setRowCount(0);
+        for (Person d : brokerList) {
+//            VitalRecord vr = e.getVital();
+            Object[] row = new Object[7];
+            
+            row[0] = d.getId();
+            row[1] = d.getuserName();
+            row[2] = d.getEmail();
+            row[3] = d.getContact();
+            row[4] = d.getAddress();
+            row[5] = d.getAge();
+
+            model.addRow(row);
+        }
     }
 
     /**
@@ -33,17 +62,17 @@ public class viewBrokerJPanel extends javax.swing.JPanel {
 
         viewBrokerjTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Broker ID", "First Name", "Last Name", "Email", "Contact Number", "Address", "Age"
+                "Broker ID", "Name", "Email", "Contact Number", "Address", "Age"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class
+                java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {

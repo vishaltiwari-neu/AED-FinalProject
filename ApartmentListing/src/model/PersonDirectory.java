@@ -15,8 +15,8 @@ import java.util.List;
  * @author HP
  */
 public class PersonDirectory {
-    
-    
+
+
     public void signup(String name, int age, String userName, String password, Role role, String contactNumber, String address, String cityName, String email) {
 
         Connection dbConn = Database.createConnection();
@@ -124,5 +124,5 @@ public class PersonDirectory {
             return null;
         }
         return brokerList;
-    } 
+    }
 }

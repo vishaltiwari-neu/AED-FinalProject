@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # Compiled class file
 *.class
 
@@ -26,3 +27,7 @@ hs_err_pid*
 ApartmentListing/build/
 ApartmentListing/nbproject/
 ApartmentListing/dist/
+=======
+/ApartmentListing/build/
+/ApartmentListing/nbproject/private/
+>>>>>>> Stashed changes

@@ -131,6 +131,12 @@ public class Login extends javax.swing.JPanel {
         Person person = pd.login(username, password, r);
 
         ownerJFrame pageOwner = new ownerJFrame(person);
+        CustomerLogin pageCustomer = new CustomerLogin(person);
+        AdminJFrame pageAdmin = new AdminJFrame(person);
+        qualitychecker pageQuality = new qualitychecker(person);
+        BrokerLogin pageBroker = new BrokerLogin(person);
+        
+        
         System.out.println(person.getRole());
         if (person == null){
             JOptionPane.showMessageDialog(this, "Username does not exist. Please register to login.");
@@ -139,6 +145,16 @@ public class Login extends javax.swing.JPanel {
             case "OWNER" ->
                 pageOwner.setVisible(true);
                 
+            case "CUSTOMER" ->
+                pageCustomer.setVisible(true);
+            
+            case "SYSADMIN" ->
+                pageAdmin.setVisible(true);
+            
+            case "QUALITYCHECKER" ->
+                pageQuality.setVisible(true);
+            case "BROKER" ->
+                pageBroker.setVisible(true);
         }
         /*
         int validated = validateInputFields(username, password);

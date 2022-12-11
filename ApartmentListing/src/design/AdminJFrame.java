@@ -4,7 +4,10 @@
  */
 package design;
 
-
+import java.util.Dictionary;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+import model.Person;
 
 /**
  *
@@ -15,7 +18,11 @@ public class AdminJFrame extends javax.swing.JFrame {
     /**
      * Creates new form AdminJFrame
      */
-    public AdminJFrame() {
+    static Person person;
+
+    public AdminJFrame(Person person) {
+
+        this.person = person;
         initComponents();
     }
 
@@ -127,6 +134,7 @@ public class AdminJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+
     private void updateBrokerJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBrokerJbuttonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_updateBrokerJbuttonActionPerformed
@@ -135,13 +143,14 @@ public class AdminJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         listingsJPanel jp = new listingsJPanel();
         SplitPane.setRightComponent(jp);
+        
     }//GEN-LAST:event_viewListingJbuttonActionPerformed
 
     private void createBrokerJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createBrokerJbuttonActionPerformed
         // TODO add your handling code here:
         createBrokerJPanel cb = new createBrokerJPanel();
         SplitPane.setRightComponent(cb);
-                
+
 
     }//GEN-LAST:event_createBrokerJbuttonActionPerformed
 
@@ -149,7 +158,7 @@ public class AdminJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         viewBrokerJPanel vb = new viewBrokerJPanel();
         SplitPane.setRightComponent(vb);
-        
+
     }//GEN-LAST:event_viewBrokerJbuttonActionPerformed
 
     /**
@@ -182,7 +191,7 @@ public class AdminJFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AdminJFrame().setVisible(true);
+                new AdminJFrame(person).setVisible(true);
             }
         });
     }

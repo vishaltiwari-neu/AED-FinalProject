@@ -4,6 +4,12 @@
  */
 package design;
 
+import java.util.Dictionary;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+import model.BrokerDirectory;
+import model.Person;
+
 /**
  *
  * @author HP
@@ -13,8 +19,14 @@ public class BrokerCustomerList extends javax.swing.JPanel {
     /**
      * Creates new form BrokerCustomerList
      */
-    public BrokerCustomerList() {
+    private static Person person;
+    
+    public BrokerCustomerList(Person person) {
+        this.person = person;
         initComponents();
+        BrokerDirectory bd = new BrokerDirectory();
+        List<Dictionary> dealList = bd.getBrokerDeals(person.getId());
+        populatetable(dealList);
     }
 
     /**
@@ -35,7 +47,6 @@ public class BrokerCustomerList extends javax.swing.JPanel {
         BrokerCustomerList.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setBackground(new java.awt.Color(204, 204, 255));
-        jTable1.setForeground(new java.awt.Color(0, 0, 0));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -44,13 +55,10 @@ public class BrokerCustomerList extends javax.swing.JPanel {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Contract ID", "Customer Name", "Customer Contact No", "Customer Type", "Apartment Type", "Beds", "Baths"
+                "Apt ID", "Customer Name", "Customer Contact No", "Apartment Type", "Beds", "Baths", "Apartment Address"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(3).setResizable(false);
-        }
 
         BrokerCustomerList.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 109, 940, 420));
 
@@ -81,4 +89,23 @@ public class BrokerCustomerList extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
+
+    private void populatetable(List<Dictionary> dealList) {
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+
+        model.setRowCount(0);
+        for (Dictionary d : dealList) {
+//            VitalRecord vr = e.getVital();
+            Object[] row = new Object[7];
+            row[0] = d.get("aptId");
+            row[1] = d.get("customerName");
+            row[2] = d.get("customerContact");
+            row[3] = d.get("apartmentType");
+            row[4] = d.get("beds");
+            row[5] = d.get("bath");
+            row[6] = d.get("apartmentAddress");
+            model.addRow(row);
+        }
+        
+    }
 }

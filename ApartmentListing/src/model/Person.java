@@ -18,8 +18,10 @@ public class Person {
     private boolean status;
     private String email;
     private Role role;
+    private String contact;
+    private String address;
 
-    public Person(int id, String name, int age, String userName, String password, Role role, String aptNumber, String address, String cityName, String email) {
+    public Person(int id, String name, int age, String userName, String password, Role role, String contact, String address, String cityName, String email) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -28,6 +30,23 @@ public class Person {
         this.status = true;
         this.role = role;
         this.email = email;
+        this.address = address;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
     }
 
     public int getId() {
@@ -40,10 +59,6 @@ public class Person {
 
     public String getUserName() {
         return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
     }
 
     public String getEmail() {

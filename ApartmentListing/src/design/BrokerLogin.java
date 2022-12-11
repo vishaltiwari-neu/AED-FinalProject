@@ -4,6 +4,8 @@
  */
 package design;
 
+import model.Person;
+
 /**
  *
  * @author HP
@@ -15,7 +17,10 @@ public class BrokerLogin extends javax.swing.JFrame {
      */
     
     //static PersonDirectory pd;
-    public BrokerLogin() {
+    
+    private static Person person;
+    public BrokerLogin(Person person) {
+        this.person = person;
         initComponents();
         setExtendedState(MainJFrame.MAXIMIZED_BOTH);
        
@@ -174,7 +179,7 @@ public class BrokerLogin extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        BrokerCustomerList l = new BrokerCustomerList();
+        BrokerCustomerList l = new BrokerCustomerList(person);
         BrokerPanel.setRightComponent(l);
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -214,7 +219,7 @@ public class BrokerLogin extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BrokerLogin().setVisible(true);
+                new BrokerLogin(person).setVisible(true);
             }
         });
     }

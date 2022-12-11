@@ -152,8 +152,8 @@ public class RaiseComplaint extends javax.swing.JPanel {
         rc.setVisible(false);
 
        
-        CustomerLogin cl = new CustomerLogin();
-        cl.setVisible(true);
+//        CustomerLogin cl = new CustomerLogin();
+//        cl.setVisible(true);
         
     }//GEN-LAST:event_jButton2ActionPerformed
 

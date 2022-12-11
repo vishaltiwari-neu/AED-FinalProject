@@ -300,7 +300,7 @@ public class listApartJpanel extends javax.swing.JPanel {
                                             .addComponent(jLabel3)
                                             .addComponent(streetNameJtext, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(cityJtext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -348,18 +348,18 @@ public class listApartJpanel extends javax.swing.JPanel {
 
     private void addjbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addjbuttonActionPerformed
         // TODO add your handling code here:
+        
         String apartmentNumber = addApartJtext.getText();
         String propertyType = (String) propertyTypeComboBox.getSelectedItem();
-        String beds = (String) BedsJComboBox.getSelectedItem();
-        String bath = (String) BathsComboBox.getSelectedItem();
+        int beds = Integer.parseInt((String) BedsJComboBox.getSelectedItem());
+        float bath = Float.parseFloat((String) BathsComboBox.getSelectedItem());
         String unitNumber = unitNoJtext.getText();
         String streetAddress = streetNameJtext.getText();
         String city = cityJtext.getText();
-        String rent = rentjTextField.getText();
-
-
-            JOptionPane.showMessageDialog(this,"Apartment Added Succesfully!!");
-
+        int rent = Integer.parseInt(rentjTextField.getText());
+        
+        apartmentDirectory.addApartment(person.getId(), apartmentNumber, unitNumber, city, "MA", beds, bath, propertyType, rent);
+        
 
         
     }//GEN-LAST:event_addjbuttonActionPerformed
