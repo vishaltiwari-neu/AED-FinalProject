@@ -29,9 +29,13 @@ public class DriverJFrame extends javax.swing.JFrame {
         SplitPane = new javax.swing.JSplitPane();
         controlPanel = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         workArea = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        controlPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setText("View Schedule");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -39,36 +43,19 @@ public class DriverJFrame extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        controlPanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, -1, 30));
 
-        javax.swing.GroupLayout controlPanelLayout = new javax.swing.GroupLayout(controlPanel);
-        controlPanel.setLayout(controlPanelLayout);
-        controlPanelLayout.setHorizontalGroup(
-            controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(controlPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        controlPanelLayout.setVerticalGroup(
-            controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(controlPanelLayout.createSequentialGroup()
-                .addGap(240, 240, 240)
-                .addComponent(jButton1)
-                .addContainerGap(357, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/1k.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        controlPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -130, 130, 1190));
 
         SplitPane.setLeftComponent(controlPanel);
 
-        javax.swing.GroupLayout workAreaLayout = new javax.swing.GroupLayout(workArea);
-        workArea.setLayout(workAreaLayout);
-        workAreaLayout.setHorizontalGroup(
-            workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 731, Short.MAX_VALUE)
-        );
-        workAreaLayout.setVerticalGroup(
-            workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 620, Short.MAX_VALUE)
-        );
+        workArea.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/driver123.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        workArea.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -170, 1520, 1180));
 
         SplitPane.setRightComponent(workArea);
 
@@ -76,7 +63,7 @@ public class DriverJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 836, Short.MAX_VALUE)
+            .addComponent(SplitPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1650, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,6 +118,8 @@ public class DriverJFrame extends javax.swing.JFrame {
     private javax.swing.JSplitPane SplitPane;
     private javax.swing.JPanel controlPanel;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel workArea;
     // End of variables declaration//GEN-END:variables
 }

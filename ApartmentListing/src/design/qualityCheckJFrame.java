@@ -30,6 +30,7 @@ public class qualityCheckJFrame extends javax.swing.JFrame {
         SplitPane = new javax.swing.JSplitPane();
         controlPanel = new javax.swing.JPanel();
         raiseReqJbutton = new javax.swing.JButton();
+        signOutJbutton = new javax.swing.JButton();
         workArea = new javax.swing.JPanel();
         pic = new javax.swing.JLabel();
 
@@ -39,9 +40,18 @@ public class qualityCheckJFrame extends javax.swing.JFrame {
 
         raiseReqJbutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/question (1).png"))); // NOI18N
         raiseReqJbutton.setText("Raise Request");
+        raiseReqJbutton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         raiseReqJbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 raiseReqJbuttonActionPerformed(evt);
+            }
+        });
+
+        signOutJbutton.setText("Sign Out");
+        signOutJbutton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        signOutJbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signOutJbuttonActionPerformed(evt);
             }
         });
 
@@ -49,17 +59,24 @@ public class qualityCheckJFrame extends javax.swing.JFrame {
         controlPanel.setLayout(controlPanelLayout);
         controlPanelLayout.setHorizontalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(raiseReqJbutton))
+            .addGroup(controlPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(raiseReqJbutton)
+                    .addComponent(signOutJbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         controlPanelLayout.setVerticalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
                 .addGap(383, 383, 383)
                 .addComponent(raiseReqJbutton)
-                .addContainerGap(659, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(signOutJbutton)
+                .addContainerGap(607, Short.MAX_VALUE))
         );
+
+        controlPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {raiseReqJbutton, signOutJbutton});
 
         SplitPane.setLeftComponent(controlPanel);
 
@@ -88,7 +105,7 @@ public class qualityCheckJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1638, Short.MAX_VALUE)
+            .addComponent(SplitPane)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,6 +121,12 @@ public class qualityCheckJFrame extends javax.swing.JFrame {
         SplitPane.setRightComponent(qp);
         
     }//GEN-LAST:event_raiseReqJbuttonActionPerformed
+
+    
+    private void signOutJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signOutJbuttonActionPerformed
+        // TODO add your handling code here:
+       
+    }//GEN-LAST:event_signOutJbuttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,6 +169,7 @@ public class qualityCheckJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel controlPanel;
     private javax.swing.JLabel pic;
     private javax.swing.JButton raiseReqJbutton;
+    private javax.swing.JButton signOutJbutton;
     private javax.swing.JPanel workArea;
     // End of variables declaration//GEN-END:variables
 }

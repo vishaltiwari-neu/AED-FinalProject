@@ -74,7 +74,7 @@ public class ownerJFrame extends javax.swing.JFrame {
                 .addComponent(listApartJbutton)
                 .addGap(62, 62, 62)
                 .addComponent(viewContractJbutton)
-                .addContainerGap(1102, Short.MAX_VALUE))
+                .addContainerGap(1112, Short.MAX_VALUE))
         );
 
         SplitPane.setLeftComponent(controlPanel);
@@ -93,7 +93,7 @@ public class ownerJFrame extends javax.swing.JFrame {
         workAreaLayout.setVerticalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, workAreaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(630, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addContainerGap())
         );

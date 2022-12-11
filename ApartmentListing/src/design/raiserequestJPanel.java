@@ -126,6 +126,11 @@ public class raiserequestJPanel extends javax.swing.JPanel {
         });
 
         signOutJbutton.setText("Sign Out");
+        signOutJbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signOutJbuttonActionPerformed(evt);
+            }
+        });
 
         numberWindows.setFont(new java.awt.Font("Klee", 0, 18)); // NOI18N
         numberWindows.setText("Number of Windows to be Repaired :");
@@ -363,6 +368,11 @@ public class raiserequestJPanel extends javax.swing.JPanel {
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void signOutJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signOutJbuttonActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_signOutJbuttonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -32,84 +32,58 @@ public class AdminJFrame extends javax.swing.JFrame {
         controlPanel = new javax.swing.JPanel();
         createBrokerJbutton = new javax.swing.JButton();
         viewBrokerJbutton = new javax.swing.JButton();
-        updateBrokerJbutton = new javax.swing.JButton();
         viewListingJbutton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         workArea = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        controlPanel.setBackground(new java.awt.Color(51, 204, 255));
+        controlPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         createBrokerJbutton.setText("Create Broker");
+        createBrokerJbutton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
         createBrokerJbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 createBrokerJbuttonActionPerformed(evt);
             }
         });
+        controlPanel.add(createBrokerJbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 110, 30));
 
         viewBrokerJbutton.setText("View Broker");
+        viewBrokerJbutton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
         viewBrokerJbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewBrokerJbuttonActionPerformed(evt);
             }
         });
-
-        updateBrokerJbutton.setText("Update Broker");
-        updateBrokerJbutton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateBrokerJbuttonActionPerformed(evt);
-            }
-        });
+        controlPanel.add(viewBrokerJbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 110, 30));
 
         viewListingJbutton.setText("View Listings");
+        viewListingJbutton.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
         viewListingJbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewListingJbuttonActionPerformed(evt);
             }
         });
+        controlPanel.add(viewListingJbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 110, 30));
 
-        javax.swing.GroupLayout controlPanelLayout = new javax.swing.GroupLayout(controlPanel);
-        controlPanel.setLayout(controlPanelLayout);
-        controlPanelLayout.setHorizontalGroup(
-            controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(controlPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(createBrokerJbutton)
-                    .addComponent(viewBrokerJbutton)
-                    .addComponent(updateBrokerJbutton)
-                    .addComponent(viewListingJbutton))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        controlPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {createBrokerJbutton, updateBrokerJbutton, viewBrokerJbutton, viewListingJbutton});
-
-        controlPanelLayout.setVerticalGroup(
-            controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(controlPanelLayout.createSequentialGroup()
-                .addGap(104, 104, 104)
-                .addComponent(createBrokerJbutton)
-                .addGap(18, 18, 18)
-                .addComponent(viewBrokerJbutton)
-                .addGap(18, 18, 18)
-                .addComponent(updateBrokerJbutton)
-                .addGap(18, 18, 18)
-                .addComponent(viewListingJbutton)
-                .addContainerGap(203, Short.MAX_VALUE))
-        );
-
-        controlPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {createBrokerJbutton, updateBrokerJbutton, viewBrokerJbutton, viewListingJbutton});
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/1k.png"))); // NOI18N
+        controlPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 130, 870));
 
         SplitPane.setLeftComponent(controlPanel);
 
-        javax.swing.GroupLayout workAreaLayout = new javax.swing.GroupLayout(workArea);
-        workArea.setLayout(workAreaLayout);
-        workAreaLayout.setHorizontalGroup(
-            workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 506, Short.MAX_VALUE)
-        );
-        workAreaLayout.setVerticalGroup(
-            workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 453, Short.MAX_VALUE)
-        );
+        workArea.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Kavivanar", 3, 48)); // NOI18N
+        jLabel3.setText("Hello!!");
+        workArea.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 70, 170, 140));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/mil.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        workArea.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, -3, 1320, 850));
 
         SplitPane.setRightComponent(workArea);
 
@@ -117,19 +91,15 @@ public class AdminJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPane)
+            .addComponent(SplitPane, javax.swing.GroupLayout.PREFERRED_SIZE, 834, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPane)
+            .addComponent(SplitPane, javax.swing.GroupLayout.PREFERRED_SIZE, 538, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void updateBrokerJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBrokerJbuttonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_updateBrokerJbuttonActionPerformed
 
     private void viewListingJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewListingJbuttonActionPerformed
         // TODO add your handling code here:
@@ -191,7 +161,9 @@ public class AdminJFrame extends javax.swing.JFrame {
     private javax.swing.JSplitPane SplitPane;
     private javax.swing.JPanel controlPanel;
     private javax.swing.JButton createBrokerJbutton;
-    private javax.swing.JButton updateBrokerJbutton;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JButton viewBrokerJbutton;
     private javax.swing.JButton viewListingJbutton;
     private javax.swing.JPanel workArea;

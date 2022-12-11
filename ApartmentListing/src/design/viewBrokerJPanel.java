@@ -30,9 +30,32 @@ public class viewBrokerJPanel extends javax.swing.JPanel {
         viewBrokerjTable = new javax.swing.JTable();
         signOutJbutton = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        viewBrokerjTable.setBackground(new java.awt.Color(233, 196, 159));
+        viewBrokerjTable.setForeground(new java.awt.Color(255, 255, 255));
         viewBrokerjTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -50,7 +73,14 @@ public class viewBrokerJPanel extends javax.swing.JPanel {
                 return types [columnIndex];
             }
         });
+        viewBrokerjTable.setEnabled(false);
+        viewBrokerjTable.setGridColor(new java.awt.Color(240, 217, 191));
+        viewBrokerjTable.setMinimumSize(new java.awt.Dimension(105, 100));
+        viewBrokerjTable.setSelectionBackground(new java.awt.Color(234, 205, 186));
+        viewBrokerjTable.setSelectionForeground(new java.awt.Color(220, 165, 165));
         jScrollPane1.setViewportView(viewBrokerjTable);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 360, 900, 170));
 
         signOutJbutton.setText("Sign Out");
         signOutJbutton.addActionListener(new java.awt.event.ActionListener() {
@@ -58,36 +88,23 @@ public class viewBrokerJPanel extends javax.swing.JPanel {
                 signOutJbuttonActionPerformed(evt);
             }
         });
+        add(signOutJbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 610, 110, 30));
 
-        jButton1.setText("Delete Record");
+        jButton1.setText("Update Record");
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 560, -1, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(102, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(63, 63, 63)
-                        .addComponent(signOutJbutton)
-                        .addGap(255, 255, 255))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(130, 130, 130))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(signOutJbutton)
-                    .addComponent(jButton1))
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
+        jButton2.setText("Delete Record");
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 560, 130, 30));
+
+        jLabel2.setFont(new java.awt.Font("Hoefler Text", 1, 36)); // NOI18N
+        jLabel2.setText("View Broker");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 70, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/broker (2).png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 70, 70));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/backgroundbrp.png"))); // NOI18N
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -60, 1670, 1140));
     }// </editor-fold>//GEN-END:initComponents
 
     private void signOutJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signOutJbuttonActionPerformed
@@ -97,6 +114,10 @@ public class viewBrokerJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton signOutJbutton;
     private javax.swing.JTable viewBrokerjTable;
