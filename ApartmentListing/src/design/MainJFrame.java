@@ -26,13 +26,16 @@ public class MainJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        SplitPane = new javax.swing.JSplitPane();
+        MainFrame = new javax.swing.JSplitPane();
         controlPanel = new javax.swing.JPanel();
         loginJbutton = new javax.swing.JButton();
         signupJbutton = new javax.swing.JButton();
         workArea = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1634, 959));
+
+        MainFrame.setBorder(new javax.swing.border.MatteBorder(null));
 
         loginJbutton.setText("Login ");
         loginJbutton.addActionListener(new java.awt.event.ActionListener() {
@@ -74,7 +77,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         controlPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {loginJbutton, signupJbutton});
 
-        SplitPane.setLeftComponent(controlPanel);
+        MainFrame.setLeftComponent(controlPanel);
 
         javax.swing.GroupLayout workAreaLayout = new javax.swing.GroupLayout(workArea);
         workArea.setLayout(workAreaLayout);
@@ -87,17 +90,17 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGap(0, 491, Short.MAX_VALUE)
         );
 
-        SplitPane.setRightComponent(workArea);
+        MainFrame.setRightComponent(workArea);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPane)
+            .addComponent(MainFrame)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPane)
+            .addComponent(MainFrame)
         );
 
         pack();
@@ -107,7 +110,7 @@ public class MainJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         Login l = new Login();
         SplitPane.setRightComponent(l);
-        
+
     }//GEN-LAST:event_loginJbuttonActionPerformed
 
     private void signupJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupJbuttonActionPerformed
@@ -123,7 +126,7 @@ public class MainJFrame extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -152,7 +155,7 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JSplitPane SplitPane;
+    private javax.swing.JSplitPane MainFrame;
     private javax.swing.JPanel controlPanel;
     private javax.swing.JButton loginJbutton;
     private javax.swing.JButton signupJbutton;
