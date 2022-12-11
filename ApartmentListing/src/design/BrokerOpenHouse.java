@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 import model.Apartment;
 import model.ApartmentDirectory;
 import model.BrokerDirectory;
+import model.DealDirectory;
 import model.Person;
 import model.PersonDirectory;
 
@@ -313,7 +314,7 @@ public class BrokerOpenHouse extends javax.swing.JPanel {
         int minRent = Integer.parseInt(txtappfees.getText());
         int maxRent = Integer.parseInt(txtappfees2.getText());
         
-        BrokerDirectory bd = new BrokerDirectory();
+        DealDirectory bd = new DealDirectory();
         bd.createDeal(this.broker.getId(), customer.getId(), aptid, minRent, maxRent, applicationFee, securityDeposit, brokerFees);
         
         
