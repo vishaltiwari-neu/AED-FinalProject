@@ -20,6 +20,7 @@ public class Person {
     private Role role;
     private String contact;
     private String address;
+    private String city;
 
     public Person(int id, String name, int age, String userName, String password, Role role, String contact, String address, String cityName, String email) {
         this.id = id;
@@ -31,6 +32,16 @@ public class Person {
         this.role = role;
         this.email = email;
         this.address = address;
+        this.city = cityName;
+        this.contact = contact;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public String getAddress() {

@@ -5,6 +5,11 @@
 package design;
 
 import javax.swing.JOptionPane;
+import model.Apartment;
+import model.ApartmentDirectory;
+import model.BrokerDirectory;
+import model.Person;
+import model.PersonDirectory;
 
 /**
  *
@@ -15,8 +20,38 @@ public class BrokerOpenHouse extends javax.swing.JPanel {
     /**
      * Creates new form BrokerOpenHouse
      */
-    public BrokerOpenHouse() {
+    
+    private int aptid;
+    private String customerName;
+    private static Person customer;
+    private static Apartment apartment;
+    private static Person broker;
+    
+    public BrokerOpenHouse(int aptid, String customerName, Person broker) {
+        PersonDirectory pd = new PersonDirectory();
+        ApartmentDirectory ad = new ApartmentDirectory();
         initComponents();
+        this.aptid = aptid;
+        this.customerName = customerName;
+        
+        this.customer = pd.searchPersonByUsername(customerName);
+        this.apartment = ad.searchApartmentById(aptid);
+        
+        this.broker = broker;
+        
+        initFields();
+        
+        
+    }
+    
+    private void initFields(){
+        txtname.setText(this.customer.getuserName());
+        txtcontactno.setText(this.customer.getContact());
+        System.out.println(this.customer.getContact());
+        txtemail.setText(this.customer.getEmail());
+        txtadd.setText(this.customer.getAddress());
+        txtlocation.setText(this.customer.getCity());
+        
     }
 
     /**
@@ -56,9 +91,7 @@ public class BrokerOpenHouse extends javax.swing.JPanel {
         txttenure = new javax.swing.JTextField();
         txtbrokerfees = new javax.swing.JTextField();
         txtsecuritydeposit = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
         jLabel13 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
         jLabel14 = new javax.swing.JLabel();
         txtzip = new javax.swing.JTextField();
         choicestate = new java.awt.Choice();
@@ -66,9 +99,10 @@ public class BrokerOpenHouse extends javax.swing.JPanel {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
+        txtappfees1 = new javax.swing.JTextField();
+        txtappfees2 = new javax.swing.JTextField();
 
         jPanel1.setBackground(new java.awt.Color(51, 153, 255));
-        jPanel1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
@@ -93,7 +127,6 @@ public class BrokerOpenHouse extends javax.swing.JPanel {
 
         jLabel5.setBackground(new java.awt.Color(0, 102, 102));
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/google-forms.png"))); // NOI18N
         jLabel5.setText("APPLICATION FORM");
@@ -186,7 +219,7 @@ public class BrokerOpenHouse extends javax.swing.JPanel {
                 txtappfeesActionPerformed(evt);
             }
         });
-        jPanel1.add(txtappfees, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 324, 116, -1));
+        jPanel1.add(txtappfees, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 380, 116, -1));
         jPanel1.add(txtadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 276, 128, -1));
         jPanel1.add(txtlocation, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 141, 116, -1));
         jPanel1.add(txttenure, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 183, 116, -1));
@@ -199,31 +232,15 @@ public class BrokerOpenHouse extends javax.swing.JPanel {
         });
         jPanel1.add(txtsecuritydeposit, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 276, 116, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 383, 79, -1));
-
         jLabel13.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(51, 0, 0));
         jLabel13.setText("Min");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 423, 37, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(967, 383, 81, -1));
-
         jLabel14.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(51, 0, 0));
         jLabel14.setText("Max");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(967, 423, -1, -1));
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 420, -1, -1));
         jPanel1.add(txtzip, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 495, 128, -1));
 
         choicestate.setFocusable(false);
@@ -233,17 +250,29 @@ public class BrokerOpenHouse extends javax.swing.JPanel {
         jPanel1.add(choicecity, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 442, 128, -1));
 
         jLabel15.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Choose from over 1 million apartments, houses, condos, and townhomes for rent.");
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1652, 825, -1, -1));
 
         jLabel16.setFont(new java.awt.Font("Gabriola", 1, 36)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setText("The Most Rental Listings");
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1746, 745, -1, -1));
 
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/brokeropenhouse.png"))); // NOI18N
         jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 10, -1, -1));
+
+        txtappfees1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtappfees1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtappfees1, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 324, 116, -1));
+
+        txtappfees2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtappfees2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtappfees2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 380, 116, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -275,17 +304,20 @@ public class BrokerOpenHouse extends javax.swing.JPanel {
         String email = txtemail.getText();
         int age = Integer.parseInt(txtage.getText());
         
-        JOptionPane.showMessageDialog(this, "Application Submitted Successfully");
+        float securityDeposit = Float.parseFloat(txtsecuritydeposit.getText());
+        
+        float brokerFees = Float.parseFloat(txtbrokerfees.getText());
+        
+        float applicationFee = Float.parseFloat(txtappfees1.getText());
+        
+        int minRent = Integer.parseInt(txtappfees.getText());
+        int maxRent = Integer.parseInt(txtappfees2.getText());
+        
+        BrokerDirectory bd = new BrokerDirectory();
+        bd.createDeal(this.broker.getId(), customer.getId(), aptid, minRent, maxRent, applicationFee, securityDeposit, brokerFees);
+        
         
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
 
     private void txtnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnameActionPerformed
         // TODO add your handling code here:
@@ -305,14 +337,20 @@ public class BrokerOpenHouse extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtsecuritydepositActionPerformed
 
+    private void txtappfees1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtappfees1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtappfees1ActionPerformed
+
+    private void txtappfees2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtappfees2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtappfees2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Choice choicecity;
     private java.awt.Choice choicestate;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -337,6 +375,8 @@ public class BrokerOpenHouse extends javax.swing.JPanel {
     private javax.swing.JTextField txtadd;
     private javax.swing.JTextField txtage;
     private javax.swing.JTextField txtappfees;
+    private javax.swing.JTextField txtappfees1;
+    private javax.swing.JTextField txtappfees2;
     private javax.swing.JTextField txtbrokerfees;
     private javax.swing.JTextField txtcontactno;
     private javax.swing.JTextField txtemail;

@@ -81,4 +81,25 @@ public class BrokerDirectory {
         }
         return dealList;
     }
+
+    public void createDeal(int brokerId, int customerId, int aptid, int minRent, int maxRent, float applicationFee, float securityDeposit, float brokerFee){
+ 
+        Connection dbConn = Database.createConnection();
+        
+        String query = "INSERT INTO `deals` "
+                + "(`brokerId`, `customerId`, `aptid`, `minRent` ,`maxRent`, `applicationFee`, `securityDeposit`, `brokerFee`)"
+                + "VALUES ('" + brokerId + "','" + customerId + "', '" + aptid + "',  '" + minRent + "' , '" + maxRent + "','" + applicationFee + "','" + securityDeposit + "','" + brokerFee + "')";
+        System.out.println(query);
+ 
+        try {
+
+            Statement statement = dbConn.createStatement();
+            aptid = statement.executeUpdate(query);
+
+        } catch (Exception e) {
+
+            System.out.println(e);
+        }
+    
+    }
 }

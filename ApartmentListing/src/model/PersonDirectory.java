@@ -97,6 +97,38 @@ public class PersonDirectory {
 
     }
 
+    public Person searchPersonByUsername(String username) {
+        try {
+
+            Connection con = Database.createConnection();
+            Statement statement = con.createStatement();
+            String query = "SELECT * FROM person where username='" + username + "'";
+            System.out.println(query);
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String _name = resultSet.getString("name");
+                String _username = resultSet.getString("username");
+                String _password = resultSet.getString("password");
+                int age = resultSet.getInt("age");
+                String _role = resultSet.getString("role");
+                Role person_role = Enum.valueOf(Role.class, _role);
+                String email = resultSet.getString("email");
+                String contact = resultSet.getString("contactnumber");
+                System.out.println(contact);
+                String address = resultSet.getString("address");
+                String city = resultSet.getString("city");
+                Person p = new Person(id, _name, age, _username, _password, person_role, contact, address, city, email);
+                return p;
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+            return null;
+        }
+        return null;
+
+    }
+    
     public List<Person> getPersonListByRole(Role role) {
         List<Person> brokerList = new ArrayList<>();
         try {
