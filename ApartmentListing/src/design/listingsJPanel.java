@@ -27,22 +27,29 @@ public class listingsJPanel extends javax.swing.JPanel {
     }
 
     private void populateTable(List<Dictionary> apartmentList) {
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
 
-        model.setRowCount(0);
-        for (Dictionary d : apartmentList) {
+        try {
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+
+            model.setRowCount(0);
+            for (Dictionary d : apartmentList) {
 //            VitalRecord vr = e.getVital();
-            Object[] row = new Object[9];
-            row[0] = d.get("apttype");
-            row[1] = d.get("city");
-            row[2] = d.get("bedroom");
-            row[3] = d.get("bathroom");
-            row[4] = 0;//d.get("0");
-            row[5] = 0;//d.get("0");
-            row[6] = 0;//d.get("0");
-            row[7] = d.get("owner");
-            row[8] = d.get("ownerContact");
-            model.addRow(row);
+                Object[] row = new Object[10];
+                row[0] = d.get("aptid");
+                row[1] = d.get("apttype");
+                row[2] = d.get("city");
+                row[3] = d.get("bedroom");
+                row[4] = d.get("bathroom");
+                row[5] = 0;//d.get("0");
+                row[6] = 0;//d.get("0");
+                row[7] = 0;//d.get("0");
+                row[8] = d.get("owner");
+                row[9] = d.get("ownerContact");
+                model.addRow(row);
+            }
+        }
+        catch (Exception ex){
+            System.out.println(ex);
         }
     }
 
@@ -92,6 +99,11 @@ public class listingsJPanel extends javax.swing.JPanel {
         acceptJbutton.setText("Accept");
 
         rejectJbutton.setText("Reject");
+        rejectJbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rejectJbuttonActionPerformed(evt);
+            }
+        });
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/apartment (2).png"))); // NOI18N
 
@@ -162,6 +174,14 @@ public class listingsJPanel extends javax.swing.JPanel {
                 .addContainerGap(1362, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void rejectJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rejectJbuttonActionPerformed
+        // TODO add your handling code here:
+        ApartmentDirectory ad = new ApartmentDirectory();
+        int row = jTable1.getSelectedRow();
+        String value = jTable1.getModel().getValueAt(row, 0).toString();
+        ad.deleteListing(value);
+    }//GEN-LAST:event_rejectJbuttonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -313,9 +313,9 @@ public class BrokerOpenHouse extends javax.swing.JPanel {
         
         int minRent = Integer.parseInt(txtappfees.getText());
         int maxRent = Integer.parseInt(txtappfees2.getText());
-        
+        int tenure = Integer.parseInt(txttenure.getText());
         DealDirectory bd = new DealDirectory();
-        bd.createDeal(this.broker.getId(), customer.getId(), aptid, minRent, maxRent, applicationFee, securityDeposit, brokerFees);
+        bd.createDeal(this.broker.getId(), customer.getId(), aptid, minRent, maxRent, applicationFee, securityDeposit, brokerFees, tenure);
         
         
     }//GEN-LAST:event_jButton1ActionPerformed

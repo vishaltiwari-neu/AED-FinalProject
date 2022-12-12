@@ -6,11 +6,14 @@ package model;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -86,6 +89,23 @@ public class ApartmentDirectory {
         return c;
     }
 
+    public void deleteApartment(int id) {
+
+        Connection dbConn = Database.createConnection();
+        Statement statement;
+        try {
+            statement = dbConn.createStatement();
+            String query = "delete from apartmentdirectory where id="+id+";";
+
+            System.out.println(query);
+
+            ResultSet resultSet = statement.executeQuery(query);
+        } catch (SQLException ex) {
+            Logger.getLogger(ApartmentDirectory.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
     public List<Dictionary> getApartments() {
 
         List<Dictionary> apartmentList = new ArrayList<>();
@@ -146,7 +166,7 @@ public class ApartmentDirectory {
                 float bathroom = resultSet.getFloat("bathroom");
                 String apttype = resultSet.getString("apttype");
                 int rent = resultSet.getInt("rent");
-                int isshared = resultSet.getInt("isshared"); 
+                int isshared = resultSet.getInt("isshared");
                 Apartment a = new Apartment(ownerId, apartmentNumber, address, city, state, bedroom, bathroom, apttype, rent);
                 return a;
             }
@@ -155,6 +175,10 @@ public class ApartmentDirectory {
             return null;
         }
         return null;
+    }
+
+    public void deleteListing(String value) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

@@ -205,7 +205,7 @@ public class CustomerLogin extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
 
-        Maintainence mr = new Maintainence();
+        Maintainence mr = new Maintainence(person);
         mr.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 

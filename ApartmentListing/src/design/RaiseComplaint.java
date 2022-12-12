@@ -7,6 +7,8 @@ package design;
 import static java.time.Clock.system;
 import static java.time.InstantSource.system;
 import java.util.Date;
+import model.MaintainanceRequestDirectory;
+import model.Person;
 
 /**
  *
@@ -17,8 +19,10 @@ public class RaiseComplaint extends javax.swing.JPanel {
     /**
      * Creates new form RaiseRequest
      */
-    public RaiseComplaint() {
+    private static Person person;
+    public RaiseComplaint(Person person) {
         initComponents();
+        this.person = person;
     }
 
     /**
@@ -43,19 +47,15 @@ public class RaiseComplaint extends javax.swing.JPanel {
         setBackground(new java.awt.Color(204, 153, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Raised Date:");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Complaint Type:");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Complaint:");
 
         jLabel4.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/design/query.png"))); // NOI18N
         jLabel4.setText("  RAISE REQUEST");
 
@@ -80,6 +80,11 @@ public class RaiseComplaint extends javax.swing.JPanel {
         });
 
         combocomplainttype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Electricity", "Plumbing", "Household Appliances", "Painting" }));
+        combocomplainttype.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                combocomplainttypeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -140,15 +145,18 @@ public class RaiseComplaint extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
+        MaintainanceRequestDirectory mrd = new MaintainanceRequestDirectory();
         Date raiseddate = txtraiseddate.getDate();
+        String date = raiseddate.toString();
         String complainttype  = combocomplainttype.getSelectedItem().toString();
         String complaint = txtcomplaint.getText();
- 
+        mrd.assignPerson( person.getId(), date, complainttype, complaint);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        RaiseComplaint rc = new RaiseComplaint();
+        RaiseComplaint rc = new RaiseComplaint(person);
         rc.setVisible(false);
 
        
@@ -156,6 +164,10 @@ public class RaiseComplaint extends javax.swing.JPanel {
 //        cl.setVisible(true);
         
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void combocomplainttypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combocomplainttypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_combocomplainttypeActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -12,7 +12,6 @@ import model.PersonDirectory;
 import model.Role;
 import model.EmailUtil;
 
-
 /**
  *
  * @author renuka
@@ -167,22 +166,22 @@ public class createBrokerJPanel extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
 
-        PersonDirectory pd = new PersonDirectory();
-
-        String name = txtName.getText();
-        String contactno = txtContact.getText();
-        String address = txtAddress.getText();
-        String city = "";
-        String zip = "";
-        String state = "";
-        String username = txtUserName.getText();
-    
-        String password = generatePassword();
-        String email = txtEmail.getText();
-        int age = Integer.parseInt(txtAge.getText());
-        Role r = Role.BROKER;
         try {
-            EmailUtil.sendEmail("rokadedarshana47@gmail.com", "Your Password is "+password);
+            PersonDirectory pd = new PersonDirectory();
+
+            String name = txtName.getText();
+            String contactno = txtContact.getText();
+            String address = txtAddress.getText();
+            String city = "";
+            String zip = "";
+            String state = "";
+            String username = txtUserName.getText();
+
+            String password = generatePassword();
+            String email = txtEmail.getText();
+            int age = Integer.parseInt(txtAge.getText());
+            Role r = Role.BROKER;
+            EmailUtil.sendEmail("rokadedarshana47@gmail.com", "Your Password is " + password);
 
             pd.signup(name, age, username, password, r, contactno, address, city, email);
         } catch (Exception ex) {

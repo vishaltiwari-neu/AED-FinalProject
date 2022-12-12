@@ -21,8 +21,9 @@ public class Deals {
     private float applicationFee;
     private float securityDeposit;
     private float brokerFee;
+    private int tenure;
 
-    public Deals(int brokerId, int customerId, int aptid, int minRent, int maxRent, float applicationFee, float securityDeposit, float brokerFee) {
+    public Deals(int brokerId, int customerId, int aptid, int minRent, int maxRent, float applicationFee, float securityDeposit, float brokerFee, int tenure) {
         this.brokerId = brokerId;
         this.customerId = customerId;
         this.aptid = aptid;
@@ -31,6 +32,15 @@ public class Deals {
         this.applicationFee = applicationFee;
         this.securityDeposit = securityDeposit;
         this.brokerFee = brokerFee;
+        this.tenure = tenure;
+    }
+
+    public int getTenure() {
+        return tenure;
+    }
+
+    public void setTenure(int tenure) {
+        this.tenure = tenure;
     }
 
     public int getBrokerId() {

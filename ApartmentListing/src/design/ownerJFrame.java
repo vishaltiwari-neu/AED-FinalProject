@@ -128,7 +128,7 @@ public class ownerJFrame extends javax.swing.JFrame {
 
     private void viewContractJbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewContractJbuttonActionPerformed
         // TODO add your handling code here:
-        viewContractsJPanel j = new viewContractsJPanel();
+        viewContractsJPanel j = new viewContractsJPanel(person);
         SplitPane.setRightComponent(j);
     }//GEN-LAST:event_viewContractJbuttonActionPerformed
 

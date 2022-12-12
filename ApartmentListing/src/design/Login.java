@@ -135,7 +135,10 @@ public class Login extends javax.swing.JPanel {
         AdminJFrame pageAdmin = new AdminJFrame(person);
         qualitychecker pageQuality = new qualitychecker(person);
         BrokerLogin pageBroker = new BrokerLogin(person);
-        
+        maintainencepeople pageMaintainance = new maintainencepeople(person);
+        LawyerLogin pageLawyer = new LawyerLogin(person);
+        lawyeradmin pagelawyeradmin = new lawyeradmin();
+        qcadmin pageqcadmin = new qcadmin();
         
         System.out.println(person.getRole());
         if (person == null){
@@ -155,6 +158,20 @@ public class Login extends javax.swing.JPanel {
                 pageQuality.setVisible(true);
             case "BROKER" ->
                 pageBroker.setVisible(true);
+            case "PLUMBER" ->
+                pageMaintainance.setVisible(true);
+            case "ELECTRICIAN" ->
+                pageMaintainance.setVisible(true);
+                
+            case "LAWYER" ->
+                pageLawyer.setVisible(true);
+                
+            case "LAWYERADMIN" ->
+                pagelawyeradmin.setVisible(true);
+                
+            case "QUALITYCHECKERADMIN" ->
+                pageqcadmin.setVisible(true);
+                
         }
         /*
         int validated = validateInputFields(username, password);

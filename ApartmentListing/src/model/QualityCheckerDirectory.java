@@ -102,4 +102,31 @@ public class QualityCheckerDirectory {
 
     }
 
+    
+    public List<Dictionary> getStats(){
+        List<Dictionary> statsList = new ArrayList();
+        
+        
+        Connection dbConn = Database.createConnection();
+
+        String query = "select count(aptid) count, qcid from qctable group by qcid;";
+
+        System.out.println(query);
+
+        try {
+            Statement statement = dbConn.createStatement();
+
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()) {
+                Dictionary dict = new Hashtable();
+                dict.put("qcid", resultSet.getInt("qcid"));
+                dict.put("count", resultSet.getInt("count"));
+                statsList.add(dict);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(DealDirectory.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return statsList;
+    }
 }

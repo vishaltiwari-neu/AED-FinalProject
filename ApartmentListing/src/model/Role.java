@@ -20,5 +20,6 @@ public enum Role {
     QUALITYCHECKER,
     PLUMBER,
     ELECTRICIAN,
-    CLEANER
+    CLEANER,
+    QUALITYCHECKERADMIN
 }

@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package design;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import model.PersonDirectory;
 import model.Role;
@@ -17,7 +20,7 @@ public class SignUp extends javax.swing.JPanel {
      * Creates new form SignUp
      */
     public SignUp() {
-   
+
         initComponents();
         Role[] role = Role.values();
         addRoles(role);
@@ -215,13 +218,54 @@ public class SignUp extends javax.swing.JPanel {
     private void btnsigninMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnsigninMouseReleased
         // TODO add your handling code here:
     }//GEN-LAST:event_btnsigninMouseReleased
-    
+
     private void addRoles(Role[] role) {
         for (Role r : role) {
             choicerole.add(r.toString());
         }
     }
-    
+
+    private int validateInputFields(String name, int age, String contactno, String address, String city, String zip, String state, String username, String password) {
+        //Function to validate the input fields
+        Pattern patternCellNumber = Pattern.compile("^[+\\d](\\d{11})$");
+        Matcher matcherCell = patternCellNumber.matcher(contactno);
+        int validated = 1;
+
+        if (name == null || name.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Name cannot be empty.");
+            validated = 0;
+        } else if (address == null || address.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Address cannot be empty.");
+            validated = 0;
+        } else if (contactno == null || contactno.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Contact no cannot be empty.");
+            validated = 0;
+        } else if (!matcherCell.matches()) {
+            JOptionPane.showMessageDialog(this, "Contact number should be valid.");
+            validated = 0;
+        } else if (city == null || city.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "City cannot be empty.");
+            validated = 0;
+        } else if (age < 0 || age > 99) {
+            JOptionPane.showMessageDialog(this, "Age cannot be less than 0");
+            validated = 0;
+        } else if (zip == null || zip.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Zip cannot be empty.");
+            validated = 0;
+        } else if (state == null || state.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "State cannot be empty.");
+            validated = 0;
+        } else if (username == null || username.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Username cannot be empty.");
+            validated = 0;
+        } else if (password == null || password.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Password cannot be empty.");
+            validated = 0;
+        }
+
+        return validated;
+    }
+
     private void btnsigninActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsigninActionPerformed
         // TODO add your handling code here:
         String name = txtname.getText();
@@ -238,9 +282,12 @@ public class SignUp extends javax.swing.JPanel {
 
         PersonDirectory pd = new PersonDirectory();
 
-        pd.signup(name, age, username, password, r, contactno, address, city, email);
-        
-        JOptionPane.showMessageDialog(this,"SignUp Successfull");
+        int validated = validateInputFields(name, age, contactno, address, city, zip, state, username, password);
+        if (validated == 1) {
+            pd.signup(name, age, username, password, r, contactno, address, city, email);
+        }
+
+        JOptionPane.showMessageDialog(this, "SignUp Successfull");
 
     }//GEN-LAST:event_btnsigninActionPerformed
 

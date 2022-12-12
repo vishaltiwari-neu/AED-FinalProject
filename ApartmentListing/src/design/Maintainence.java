@@ -4,6 +4,8 @@
  */
 package design;
 
+import model.Person;
+
 /**
  *
  * @author HP
@@ -13,8 +15,10 @@ public class Maintainence extends javax.swing.JFrame {
     /**
      * Creates new form Maintainence
      */
-    public Maintainence() {
+    private static Person person;
+    public Maintainence(Person person) {
         initComponents();
+        this.person = person;
     }
 
     /**
@@ -170,7 +174,7 @@ public class Maintainence extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        RaiseComplaint rr = new RaiseComplaint();
+        RaiseComplaint rr = new RaiseComplaint(person);
         Maintainence.setRightComponent(rr);
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -204,7 +208,7 @@ public class Maintainence extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Maintainence().setVisible(true);
+                new Maintainence(person).setVisible(true);
             }
         });
     }

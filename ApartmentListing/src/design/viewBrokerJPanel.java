@@ -28,21 +28,25 @@ public class viewBrokerJPanel extends javax.swing.JPanel {
     }
 
     private void populateTable(List<Person> brokerList) {
-        DefaultTableModel model = (DefaultTableModel) viewBrokerjTable.getModel();
+        try {
+            DefaultTableModel model = (DefaultTableModel) viewBrokerjTable.getModel();
 
-        model.setRowCount(0);
-        for (Person d : brokerList) {
-//            VitalRecord vr = e.getVital();
-            Object[] row = new Object[7];
-            
-            row[0] = d.getId();
-            row[1] = d.getuserName();
-            row[2] = d.getEmail();
-            row[3] = d.getContact();
-            row[4] = d.getAddress();
-            row[5] = d.getAge();
+            model.setRowCount(0);
+            for (Person d : brokerList) {
+                //            VitalRecord vr = e.getVital();
+                Object[] row = new Object[7];
 
-            model.addRow(row);
+                row[0] = d.getId();
+                row[1] = d.getuserName();
+                row[2] = d.getEmail();
+                row[3] = d.getContact();
+                row[4] = d.getAddress();
+                row[5] = d.getAge();
+
+                model.addRow(row);
+            }
+        } catch (Exception ex) {
+            System.out.println(ex);
         }
     }
 

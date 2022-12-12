@@ -16,7 +16,6 @@ import java.util.List;
  */
 public class PersonDirectory {
 
-
     public void signup(String name, int age, String userName, String password, Role role, String contactNumber, String address, String cityName, String email) {
 
         Connection dbConn = Database.createConnection();
@@ -85,8 +84,10 @@ public class PersonDirectory {
                 String _role = resultSet.getString("role");
                 Role person_role = Enum.valueOf(Role.class, _role);
                 String email = resultSet.getString("email");
-                String name = resultSet.getString("name");
-                Person p = new Person(id, _name, age, _username, _password, person_role, name, name, name, email);
+                String contact = resultSet.getString("contactnumber");
+                String address = resultSet.getString("address");
+                String city = resultSet.getString("city");
+                Person p = new Person(id, _name, age, _username, _password, person_role, contact, address, city, email);
                 return p;
             }
         } catch (Exception e) {
@@ -128,7 +129,7 @@ public class PersonDirectory {
         return null;
 
     }
-    
+
     public List<Person> getPersonListByRole(Role role) {
         List<Person> brokerList = new ArrayList<>();
         try {

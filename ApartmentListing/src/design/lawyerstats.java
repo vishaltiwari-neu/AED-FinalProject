@@ -4,35 +4,28 @@
  */
 package design;
 
+import java.util.Dictionary;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
-import model.Lease;
-import model.LeaseDirectory;
+import model.Lawyer;
+import model.LawyerDirectory;
 import model.MaintainanceRequest;
-import model.Person;
 import model.PersonDirectory;
 
 /**
  *
- * @author HP
+ * @author visha_wb3uzfg
  */
-public class ViewLeaseRequest extends javax.swing.JPanel {
+public class lawyerstats extends javax.swing.JPanel {
 
     /**
-     * Creates new form ViewLeaseRequest
+     * Creates new form lawyerstats
      */
-    private static Person person;
-
-    public ViewLeaseRequest(Person person) {
+    public lawyerstats() {
+        LawyerDirectory law = new LawyerDirectory();
+        List<Dictionary> lawyerList = law.getStats();
         initComponents();
-        this.person = person;
-
-        LeaseDirectory ld = new LeaseDirectory();
-
-        List<Lease> leaseList = ld.searchLease(person.getId());
-
-        populatetable(leaseList);
-
+        populatetable(lawyerList);
     }
 
     /**
@@ -47,28 +40,21 @@ public class ViewLeaseRequest extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("Lease Requests");
+        jLabel1.setText("Lawyers Stats");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Name", "Email", "Contact No", "Owner", "Tenant"
+                "ID", "Name", "Taks Assigned", "Tasks Completed"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
-
-        jButton1.setText("APPROVE");
-
-        jButton2.setText("REJECT");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -77,54 +63,43 @@ public class ViewLeaseRequest extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 709, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(122, 122, 122)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(235, 235, 235)
-                        .addComponent(jButton1)
-                        .addGap(70, 70, 70)
-                        .addComponent(jButton2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(280, 280, 280)
+                        .addGap(291, 291, 291)
                         .addComponent(jLabel1)))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(219, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(33, 33, 33)
                 .addComponent(jLabel1)
-                .addGap(34, 34, 34)
+                .addGap(36, 36, 36)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addGap(37, 37, 37))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 
-    private void populatetable(List<Lease> leaseList) {
+    private void populatetable(List<Dictionary> lawyerList) {
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         PersonDirectory pd = new PersonDirectory();
         model.setRowCount(0);
-        for (Lease d : leaseList) {
+        for (Dictionary d : lawyerList) {
 //            VitalRecord vr = e.getVital();
             Object[] row = new Object[9];
-            row[0] = d.getName();
-            row[1] = d.getEmail();
-            row[2] = d.getContactNumber();
-            row[3] = d.getOwner();
-            row[4] = d.getTenant();
+            int customerId = (int) d.get("lawyerid");
+            String customerName = pd.searchPersonById(customerId).getuserName();
+            row[0] = customerId;
+            row[1] = customerName;
+            row[2] = d.get("count");
             model.addRow(row);
         }
     }

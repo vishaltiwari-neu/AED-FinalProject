@@ -4,6 +4,14 @@
  */
 package design;
 
+import java.util.Dictionary;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+import model.DealDirectory;
+import model.Deals;
+import model.Person;
+import model.PersonDirectory;
+
 /**
  *
  * @author renuka
@@ -13,8 +21,15 @@ public class viewContractsJPanel extends javax.swing.JPanel {
     /**
      * Creates new form GenerateContractsJPanel
      */
-    public viewContractsJPanel() {
+    private static Person owner;
+
+    public viewContractsJPanel(Person owner) {
+        this.owner = owner;
+        DealDirectory dealDirectory = new DealDirectory();
+        int id = owner.getId();
+        List<Deals> dealList = dealDirectory.getDealByOwner(id);
         initComponents();
+        populatetable(dealList);
     }
 
     /**
@@ -43,20 +58,20 @@ public class viewContractsJPanel extends javax.swing.JPanel {
         viewContractJTable.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(1, 1, 1), 1, true));
         viewContractJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Contract ID", "Name", "Email", "Contact Number", "Current Address", "City", "State", "Zip Code", "Tenure", "Security Deposit", "Application Fee", "Budget/Rent"
+                "Name", "Email", "Contact Number", "Current Address", "City", "Tenure", "Security Deposit", "Application Fee", "Budget/Rent"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class, java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
+                java.lang.String.class, java.lang.Object.class, java.lang.Integer.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -166,4 +181,28 @@ public class viewContractsJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField searchjTextField;
     private javax.swing.JTable viewContractJTable;
     // End of variables declaration//GEN-END:variables
+
+    private void populatetable(List<Deals> dealList) {
+        DefaultTableModel model = (DefaultTableModel) viewContractJTable.getModel();
+        PersonDirectory pd = new PersonDirectory();
+
+        model.setRowCount(0);
+        for (Deals d : dealList) {
+//            VitalRecord vr = e.getVital();
+            Object[] row = new Object[9];
+            int customerId = d.getCustomerId();
+            Person customer = pd.searchPersonById(customerId);
+            System.out.println("Contact"+customer.getContact());
+            row[0] = customer.getuserName();
+            row[1] = customer.getEmail();
+            row[2] = customer.getContact();
+            row[3] = customer.getAddress();
+            row[4] = customer.getCity();
+            row[6] = d.getSecurityDeposit();
+            row[7] = d.getBrokerFee();
+            row[8] = d.getApplicationFee();
+            row[5] = d.getTenure();
+            model.addRow(row);
+        }
+    }
 }
